@@ -1,0 +1,857 @@
+
+/* =========================================================
+   AAFIYA LAKEVIEW - BLOG DETAILS
+   Shared responsive stylesheet for all blog detail pages
+========================================================= */
+
+.aafiya-blog-details-page {
+  --bd-navy: #0d1741;
+  --bd-navy-dark: #080f30;
+  --bd-gold: #bc8634;
+  --bd-gold-light: #f7921b;
+  --bd-cream: #fff9ef;
+  --bd-text: #626774;
+  --bd-muted: #858997;
+  --bd-border: #e9e6df;
+  --bd-white: #ffffff;
+
+  width: 100%;
+  overflow: hidden;
+  background: var(--bd-white);
+  color: var(--bd-text);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.aafiya-blog-details-page *,
+.aafiya-blog-details-page *::before,
+.aafiya-blog-details-page *::after {
+  box-sizing: border-box;
+}
+
+.aafiya-blog-details-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.aafiya-blog-details-page a {
+  text-decoration: none;
+}
+
+.aafiya-blog-details-page button,
+.aafiya-blog-details-page input {
+  font: inherit;
+}
+
+.aafiya-blog-details-container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   PAGE TITLE BANNER
+========================================================= */
+
+.aafiya-blog-details-banner {
+  position: relative;
+  display: flex;
+  min-height: 310px;
+  align-items: center;
+  padding: 115px 0 35px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(5, 11, 35, 0.96),
+      rgba(13, 23, 65, 0.84)
+    ),
+    url("/assets/img/about-us.jpg") center / cover no-repeat;
+}
+.aafiya-blog-details-banner::before,
+.aafiya-blog-details-banner::after {
+  position: absolute;
+  border: 1px solid rgba(247, 146, 27, 0.2);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.aafiya-blog-details-banner::before {
+  top: -230px;
+  right: -80px;
+  width: 460px;
+  height: 460px;
+}
+
+.aafiya-blog-details-banner::after {
+  right: 140px;
+  bottom: -300px;
+  width: 470px;
+  height: 470px;
+}
+
+.aafiya-blog-details-banner .aafiya-blog-details-container {
+  position: relative;
+  z-index: 1;
+}
+
+.aafiya-blog-details-eyebrow {
+  display: block;
+  margin-bottom: 15px;
+  color: #f5b94e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.7;
+}
+
+.aafiya-blog-details-banner h1 {
+  max-width: 950px;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.aafiya-blog-details-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.aafiya-blog-details-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #f5b94e;
+  transition: color 0.25s ease;
+}
+
+.aafiya-blog-details-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.aafiya-blog-details-breadcrumb > svg {
+  flex-shrink: 0;
+  color: #f5b94e;
+  font-size: 14px;
+}
+
+.aafiya-blog-details-breadcrumb span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   MAIN CONTENT LAYOUT
+========================================================= */
+
+.aafiya-blog-details-main {
+  padding: 75px 0 95px;
+  background: #ffffff;
+}
+
+.aafiya-blog-details-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  align-items: start;
+  gap: 38px;
+}
+
+.aafiya-blog-details-primary {
+  min-width: 0;
+}
+
+.aafiya-blog-details-article {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* =========================================================
+   ARTICLE FEATURE IMAGE
+========================================================= */
+
+.aafiya-blog-details-image {
+  width: 100%;
+  overflow: hidden;
+  background: #f4f0e9;
+  line-height: 0;
+}
+
+.aafiya-blog-details-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================================
+   ARTICLE META INFORMATION
+========================================================= */
+
+.aafiya-blog-details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 23px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--bd-border);
+}
+
+.aafiya-blog-details-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--bd-muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.aafiya-blog-details-meta svg {
+  flex-shrink: 0;
+  color: var(--bd-gold);
+  font-size: 16px;
+}
+
+/* =========================================================
+   ARTICLE TYPOGRAPHY
+========================================================= */
+
+.aafiya-blog-article-content {
+  padding-top: 25px;
+  color: var(--bd-text);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+.aafiya-blog-article-content h2 {
+  margin: 0 0 20px;
+  color: var(--bd-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(25px, 2.6vw, 32px);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.aafiya-blog-article-content h3 {
+  position: relative;
+  margin: 34px 0 13px;
+  padding-left: 17px;
+  color: var(--bd-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.aafiya-blog-article-content h3::before {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+  width: 3px;
+  background: var(--bd-gold);
+  content: "";
+}
+
+.aafiya-blog-article-content p {
+  margin: 0 0 20px;
+  color: var(--bd-text);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+.aafiya-blog-article-content ul,
+.aafiya-blog-article-content ol {
+  margin: 12px 0 23px;
+  padding-left: 25px;
+}
+
+.aafiya-blog-article-content ul {
+  list-style: disc;
+}
+
+.aafiya-blog-article-content ol {
+  list-style: decimal;
+}
+
+.aafiya-blog-article-content li {
+  margin-bottom: 12px;
+  padding-left: 5px;
+  color: var(--bd-text);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.aafiya-blog-article-content li::marker {
+  color: var(--bd-gold);
+}
+
+.aafiya-blog-article-content strong {
+  color: var(--bd-navy);
+  font-weight: 700;
+}
+
+.aafiya-blog-article-content a {
+  color: var(--bd-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.25s ease;
+}
+
+.aafiya-blog-article-content a:hover {
+  color: var(--bd-navy);
+}
+
+.aafiya-blog-article-content blockquote {
+  margin: 25px 0;
+  padding: 20px 25px;
+  border-left: 3px solid var(--bd-gold);
+  background: var(--bd-cream);
+  color: var(--bd-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   BACK TO BLOG LINK
+========================================================= */
+
+.aafiya-blog-details-back {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid var(--bd-border);
+}
+
+.aafiya-blog-details-back a {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 19px;
+  border: 1px solid var(--bd-navy);
+  background: var(--bd-navy);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.aafiya-blog-details-back a svg {
+  font-size: 17px;
+  transform: rotate(180deg);
+}
+
+.aafiya-blog-details-back a:hover {
+  border-color: var(--bd-gold);
+  background: var(--bd-gold);
+  color: #ffffff;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.aafiya-blog-details-sidebar {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.aafiya-blog-sidebar-card {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid var(--bd-border);
+  background: #ffffff;
+  box-shadow: 0 7px 28px rgba(13, 23, 65, 0.045);
+}
+
+.aafiya-blog-sidebar-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--bd-border);
+}
+
+.aafiya-blog-sidebar-heading > svg {
+  flex-shrink: 0;
+  color: var(--bd-gold);
+  font-size: 21px;
+}
+
+.aafiya-blog-sidebar-heading h3 {
+  margin: 0;
+  color: var(--bd-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.aafiya-blog-sidebar-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.aafiya-blog-sidebar-post {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  align-items: start;
+  gap: 13px;
+  min-width: 0;
+}
+
+.aafiya-blog-sidebar-post > img {
+  display: block;
+  width: 90px;
+  height: 82px;
+  object-fit: cover;
+  object-position: center;
+  background: #f4f0e9;
+}
+
+.aafiya-blog-sidebar-post > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.aafiya-blog-sidebar-post strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--bd-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  transition: color 0.25s ease;
+}
+
+.aafiya-blog-sidebar-post:hover strong {
+  color: var(--bd-gold);
+}
+
+.aafiya-blog-sidebar-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--bd-gold);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.aafiya-blog-sidebar-read svg {
+  font-size: 13px;
+  transition: transform 0.25s ease;
+}
+
+.aafiya-blog-sidebar-post:hover .aafiya-blog-sidebar-read svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   SIDEBAR BOOKING CTA
+========================================================= */
+
+.aafiya-blog-sidebar-cta {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--bd-navy);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8, 15, 48, 0.98),
+      rgba(13, 23, 65, 0.96)
+    );
+}
+
+.aafiya-blog-sidebar-cta::after {
+  position: absolute;
+  right: -65px;
+  bottom: -85px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(247, 146, 27, 0.23);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.aafiya-blog-sidebar-cta-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  place-items: center;
+  border: 1px solid rgba(245, 185, 78, 0.5);
+  background: rgba(245, 185, 78, 0.1);
+  color: #f5b94e;
+  font-size: 23px;
+}
+
+.aafiya-blog-sidebar-cta h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-family: "Lora", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.aafiya-blog-sidebar-cta p {
+  margin: 0 0 21px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.aafiya-blog-sidebar-button {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 15px;
+  border: 1px solid var(--bd-gold-light);
+  background: var(--bd-gold-light);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.aafiya-blog-sidebar-button svg {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.aafiya-blog-sidebar-button:hover {
+  border-color: #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  .aafiya-blog-details-container {
+    width: min(100% - 36px, 800px);
+  }
+
+  .aafiya-blog-details-banner {
+    min-height: 285px;
+    padding: 85px 0 45px;
+  }
+
+  .aafiya-blog-details-main {
+    padding: 60px 0 75px;
+  }
+
+  .aafiya-blog-details-layout {
+    grid-template-columns: minmax(0, 1.7fr) minmax(230px, 1fr);
+    gap: 24px;
+  }
+
+  .aafiya-blog-sidebar-card {
+    padding: 20px;
+  }
+
+  .aafiya-blog-sidebar-post {
+    grid-template-columns: 75px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .aafiya-blog-sidebar-post > img {
+    width: 75px;
+    height: 72px;
+  }
+
+  .aafiya-blog-sidebar-post strong {
+    font-size: 13px;
+  }
+
+  .aafiya-blog-article-content {
+    font-size: 14px;
+  }
+
+  .aafiya-blog-article-content p,
+  .aafiya-blog-article-content li {
+    font-size: 14px;
+  }
+
+  .aafiya-blog-article-content h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .aafiya-blog-details-container {
+    width: calc(100% - 32px);
+  }
+
+  .aafiya-blog-details-banner {
+    min-height: 255px;
+    padding: 85px 0 38px;
+  }
+
+  .aafiya-blog-details-eyebrow {
+    margin-bottom: 11px;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .aafiya-blog-details-banner h1 {
+    font-size: clamp(27px, 6.5vw, 36px);
+    line-height: 1.4;
+  }
+
+  .aafiya-blog-details-breadcrumb {
+    gap: 7px;
+    margin-top: 17px;
+    font-size: 11px;
+  }
+
+  .aafiya-blog-details-main {
+    padding: 40px 0 55px;
+  }
+
+  .aafiya-blog-details-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .aafiya-blog-details-meta {
+    gap: 10px 17px;
+    padding: 15px 0;
+  }
+
+  .aafiya-blog-details-meta span {
+    font-size: 11px;
+  }
+
+  .aafiya-blog-article-content {
+    padding-top: 22px;
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .aafiya-blog-article-content h2 {
+    margin-bottom: 16px;
+    font-size: clamp(23px, 5.5vw, 29px);
+    line-height: 1.5;
+  }
+
+  .aafiya-blog-article-content h3 {
+    margin-top: 27px;
+    margin-bottom: 11px;
+    padding-left: 13px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .aafiya-blog-article-content h3::before {
+    top: 4px;
+    bottom: 4px;
+  }
+
+  .aafiya-blog-article-content p,
+  .aafiya-blog-article-content li {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .aafiya-blog-article-content p {
+    margin-bottom: 17px;
+  }
+
+  .aafiya-blog-article-content ul,
+  .aafiya-blog-article-content ol {
+    padding-left: 21px;
+  }
+
+  .aafiya-blog-article-content li {
+    margin-bottom: 10px;
+  }
+
+  .aafiya-blog-article-content blockquote {
+    padding: 17px 18px;
+    font-size: 16px;
+  }
+
+  .aafiya-blog-details-sidebar {
+    gap: 20px;
+  }
+
+  .aafiya-blog-sidebar-card {
+    padding: 22px;
+  }
+
+  .aafiya-blog-sidebar-heading h3 {
+    font-size: 20px;
+  }
+
+  .aafiya-blog-sidebar-post {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .aafiya-blog-sidebar-post > img {
+    width: 88px;
+    height: 78px;
+  }
+
+  .aafiya-blog-sidebar-post strong {
+    font-size: 14px;
+  }
+
+  .aafiya-blog-sidebar-read {
+    font-size: 11px;
+  }
+
+  .aafiya-blog-sidebar-cta h3 {
+    font-size: 21px;
+  }
+
+  .aafiya-blog-details-back a {
+    min-height: 44px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .aafiya-blog-details-container {
+    width: calc(100% - 24px);
+  }
+
+  .aafiya-blog-details-banner {
+    min-height: 235px;
+    padding: 80px 0 32px;
+  }
+
+  .aafiya-blog-details-banner h1 {
+    font-size: 26px;
+  }
+
+  .aafiya-blog-details-breadcrumb {
+    font-size: 10px;
+  }
+
+  .aafiya-blog-details-main {
+    padding: 30px 0 45px;
+  }
+
+  .aafiya-blog-details-meta {
+    gap: 9px 13px;
+  }
+
+  .aafiya-blog-details-meta span {
+    font-size: 10px;
+  }
+
+  .aafiya-blog-article-content h2 {
+    font-size: 23px;
+  }
+
+  .aafiya-blog-article-content h3 {
+    font-size: 18px;
+  }
+
+  .aafiya-blog-article-content p,
+  .aafiya-blog-article-content li {
+    font-size: 12px;
+  }
+
+  .aafiya-blog-sidebar-card {
+    padding: 18px;
+  }
+
+  .aafiya-blog-sidebar-post {
+    grid-template-columns: 75px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .aafiya-blog-sidebar-post > img {
+    width: 75px;
+    height: 70px;
+  }
+
+  .aafiya-blog-sidebar-post strong {
+    font-size: 12px;
+  }
+
+  .aafiya-blog-sidebar-cta h3 {
+    font-size: 19px;
+  }
+
+  .aafiya-blog-sidebar-button {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.aafiya-blog-details-page a:focus-visible {
+  outline: 3px solid rgba(188, 134, 52, 0.55);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aafiya-blog-details-page *,
+  .aafiya-blog-details-page *::before,
+  .aafiya-blog-details-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

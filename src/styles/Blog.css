@@ -1,0 +1,2247 @@
+/* =====================================================
+
+   AAFIYA LAKEVIEW - BLOG PAGE
+
+   Premium Responsive Stylesheet
+
+===================================================== */
+
+.aafiya-blog-page {
+
+  --blog-navy: #0d1741;
+
+  --blog-navy-dark: #080f30;
+
+  --blog-gold: #bc8634;
+
+  --blog-gold-light: #f7921b;
+
+  --blog-cream: #fff9ef;
+
+  --blog-text: #626774;
+
+  --blog-muted: #858997;
+
+  --blog-border: #e9e6df;
+
+  --blog-white: #ffffff;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: var(--blog-white);
+
+  color: var(--blog-text);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+}
+
+.aafiya-blog-page *,
+
+.aafiya-blog-page *::before,
+
+.aafiya-blog-page *::after {
+
+  box-sizing: border-box;
+
+}
+
+.aafiya-blog-page img {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+.aafiya-blog-page a {
+
+  text-decoration: none;
+
+}
+
+.aafiya-blog-page button,
+
+.aafiya-blog-page input,
+
+.aafiya-blog-page select {
+
+  font: inherit;
+
+}
+
+.aafiya-blog-container {
+
+  width: min(1200px, calc(100% - 48px));
+
+  margin-inline: auto;
+
+}
+
+/* =====================================================
+
+   PAGE BANNER
+
+===================================================== */
+
+.aafiya-blog-banner {
+
+  position: relative;
+
+  display: flex;
+
+  min-height: 345px;
+
+  align-items: center;
+
+  padding: 100px 0 65px;
+
+  overflow: hidden;
+
+  background:
+
+    linear-gradient(
+
+      100deg,
+
+      rgba(5, 11, 35, 0.95),
+
+      rgba(13, 23, 65, 0.78)
+
+    ),
+
+    url("/assets/img/about-us.jpg") center / cover no-repeat;
+
+}
+
+.aafiya-blog-banner::before,
+
+.aafiya-blog-banner::after {
+
+  position: absolute;
+
+  border: 1px solid rgba(247, 146, 27, 0.22);
+
+  border-radius: 50%;
+
+  content: "";
+
+  pointer-events: none;
+
+}
+
+.aafiya-blog-banner::before {
+
+  top: -200px;
+
+  right: -100px;
+
+  width: 440px;
+
+  height: 440px;
+
+}
+
+.aafiya-blog-banner::after {
+
+  right: 80px;
+
+  bottom: -270px;
+
+  width: 440px;
+
+  height: 440px;
+
+}
+
+.aafiya-blog-banner .aafiya-blog-container {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+.aafiya-blog-eyebrow {
+
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #f5b94e;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+}
+
+.aafiya-blog-banner h1 {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Lora", Georgia, serif;
+
+  font-size: clamp(37px, 5vw, 55px);
+
+  font-weight: 500;
+
+  line-height: 1.25;
+
+}
+
+.aafiya-blog-breadcrumb {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 23px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+}
+
+.aafiya-blog-breadcrumb a {
+
+  color: #f5b94e;
+
+  transition: color 0.25s ease;
+
+}
+
+.aafiya-blog-breadcrumb a:hover {
+
+  color: #ffffff;
+
+}
+
+.aafiya-blog-breadcrumb svg {
+
+  color: #f5b94e;
+
+  font-size: 15px;
+
+}
+
+/* =====================================================
+
+   MAIN SECTION
+
+===================================================== */
+
+.aafiya-blog-main {
+
+  padding: 85px 0 100px;
+
+  background: #ffffff;
+
+}
+
+/* Section Heading */
+
+.aafiya-blog-section-heading {
+
+  max-width: 780px;
+
+  margin: 0 auto 48px;
+
+  text-align: center;
+
+}
+
+.aafiya-blog-section-eyebrow {
+
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: var(--blog-gold);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+}
+
+.aafiya-blog-section-heading h2 {
+
+  margin: 0;
+
+  color: var(--blog-navy);
+
+  font-family: "Lora", Georgia, serif;
+
+  font-size: clamp(31px, 3.6vw, 43px);
+
+  font-weight: 600;
+
+  line-height: 1.35;
+
+}
+
+.aafiya-blog-section-heading p {
+
+  max-width: 650px;
+
+  margin: 17px auto 0;
+
+  color: var(--blog-muted);
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.95;
+
+}
+
+/* Responsive Blog Heading Underline Image */
+
+.aafiya-blog-page img.aafiya-blog-heading-line {
+
+  display: block !important;
+
+  width: clamp(100px, 14vw, 160px) !important;
+
+  height: auto !important;
+
+  aspect-ratio: auto;
+
+  max-width: 100% !important;
+
+  margin: 20px auto 0 !important;
+
+  object-fit: contain !important;
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+  .aafiya-blog-page img.aafiya-blog-heading-line {
+
+    width: clamp(110px, 17vw, 145px) !important;
+
+    margin-top: 18px !important;
+
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+  .aafiya-blog-page img.aafiya-blog-heading-line {
+
+    width: clamp(100px, 24vw, 130px) !important;
+
+    margin-top: 16px !important;
+
+  }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 420px) {
+
+  .aafiya-blog-page img.aafiya-blog-heading-line {
+
+    width: 100px !important;
+
+    margin-top: 14px !important;
+
+  }
+
+}
+
+/* =====================================================
+
+   TOOLBAR
+
+===================================================== */
+
+.aafiya-blog-toolbar {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+
+}
+
+.aafiya-blog-search {
+
+  display: flex;
+
+  flex: 1;
+
+  max-width: 480px;
+
+  min-width: 0;
+
+  height: 50px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 15px;
+
+  border: 1px solid var(--blog-border);
+
+  background: #ffffff;
+
+  transition:
+
+    border-color 0.25s ease,
+
+    box-shadow 0.25s ease;
+
+}
+
+.aafiya-blog-search:focus-within {
+
+  border-color: var(--blog-gold);
+
+  box-shadow: 0 0 0 3px rgba(188, 134, 52, 0.09);
+
+}
+
+.aafiya-blog-search > svg {
+
+  flex-shrink: 0;
+
+  color: var(--blog-gold);
+
+  font-size: 20px;
+
+}
+
+.aafiya-blog-search input {
+
+  width: 100%;
+
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--blog-navy);
+
+  font-size: 13px;
+
+}
+
+.aafiya-blog-search input::placeholder {
+
+  color: #9699a3;
+
+}
+
+.aafiya-blog-search input::-webkit-search-cancel-button {
+
+  display: none;
+
+}
+
+.aafiya-blog-search button {
+
+  display: grid;
+
+  width: 30px;
+
+  height: 30px;
+
+  flex-shrink: 0;
+
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--blog-muted);
+
+  cursor: pointer;
+
+}
+
+.aafiya-blog-toolbar-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+.aafiya-blog-sort {
+
+  display: flex;
+
+  height: 48px;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 12px;
+
+  border: 1px solid var(--blog-border);
+
+  background: #ffffff;
+
+  color: var(--blog-gold);
+
+}
+
+.aafiya-blog-sort > svg {
+
+  flex-shrink: 0;
+
+  font-size: 18px;
+
+}
+
+.aafiya-blog-sort select {
+
+  max-width: 150px;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--blog-navy);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+}
+
+.aafiya-blog-view-toggle {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 4px;
+
+  border: 1px solid var(--blog-border);
+
+  background: #ffffff;
+
+}
+
+.aafiya-blog-view-toggle button {
+
+  display: grid;
+
+  width: 36px;
+
+  height: 36px;
+
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--blog-muted);
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  transition:
+
+    background 0.25s ease,
+
+    color 0.25s ease;
+
+}
+
+.aafiya-blog-view-toggle button.is-active {
+
+  background: var(--blog-navy);
+
+  color: #ffffff;
+
+}
+
+.aafiya-blog-view-toggle button:hover:not(.is-active) {
+
+  color: var(--blog-gold);
+
+}
+
+/* =====================================================
+
+   CATEGORY FILTERS
+
+===================================================== */
+
+.aafiya-blog-filter-row {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding: 20px 0;
+
+  border-top: 1px solid var(--blog-border);
+
+  border-bottom: 1px solid var(--blog-border);
+
+}
+
+.aafiya-blog-filter-label {
+
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding-top: 9px;
+
+  color: var(--blog-navy);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+.aafiya-blog-filter-label svg {
+
+  color: var(--blog-gold);
+
+  font-size: 18px;
+
+}
+
+.aafiya-blog-categories {
+
+  display: flex;
+
+  flex: 1;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 9px;
+
+}
+
+.aafiya-blog-categories button {
+
+  min-height: 34px;
+
+  padding: 8px 13px;
+
+  border: 1px solid #e8e5de;
+
+  border-radius: 0;
+
+  background: #ffffff;
+
+  color: #666b78;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  transition:
+
+    background 0.25s ease,
+
+    color 0.25s ease,
+
+    border-color 0.25s ease;
+
+}
+
+.aafiya-blog-categories button:hover {
+
+  border-color: var(--blog-gold);
+
+  color: var(--blog-gold);
+
+}
+
+.aafiya-blog-categories button.is-active {
+
+  border-color: var(--blog-navy);
+
+  background: var(--blog-navy);
+
+  color: #ffffff;
+
+}
+
+/* =====================================================
+
+   RESULTS COUNT
+
+===================================================== */
+
+.aafiya-blog-results {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin: 25px 0 23px;
+
+}
+
+.aafiya-blog-results p {
+
+  margin: 0;
+
+  color: var(--blog-muted);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+}
+
+.aafiya-blog-results strong {
+
+  color: var(--blog-navy);
+
+  font-weight: 800;
+
+}
+
+.aafiya-blog-reset {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--blog-gold);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+}
+
+.aafiya-blog-reset:hover {
+
+  color: var(--blog-navy);
+
+}
+
+/* =====================================================
+
+   BLOG GRID
+
+===================================================== */
+
+.aafiya-blog-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 30px 25px;
+
+}
+
+/* =====================================================
+
+   BLOG CARD
+
+===================================================== */
+
+.aafiya-blog-card {
+
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: 1px solid #ece7dc;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 24px rgba(13, 23, 65, 0.045);
+
+  transition:
+
+    transform 0.35s ease,
+
+    border-color 0.35s ease,
+
+    box-shadow 0.35s ease;
+
+}
+
+.aafiya-blog-card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: rgba(188, 134, 52, 0.5);
+
+  box-shadow: 0 18px 40px rgba(13, 23, 65, 0.11);
+
+}
+
+/* Card Image */
+
+.aafiya-blog-card-image {
+
+  position: relative;
+
+  display: block;
+
+  height: 235px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  background: #f1eee7;
+
+}
+
+.aafiya-blog-card-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+
+    transform 0.65s ease,
+
+    opacity 0.3s ease;
+
+}
+
+.aafiya-blog-card:hover .aafiya-blog-card-image img {
+
+  transform: scale(1.065);
+
+}
+
+.aafiya-blog-image-icon {
+
+  position: absolute;
+
+  right: 15px;
+
+  bottom: 15px;
+
+  display: grid;
+
+  width: 42px;
+
+  height: 42px;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  background: var(--blog-navy);
+
+  color: #f5b94e;
+
+  font-size: 19px;
+
+  opacity: 0;
+
+  transform: translateY(7px);
+
+  transition:
+
+    opacity 0.3s ease,
+
+    transform 0.3s ease;
+
+}
+
+.aafiya-blog-card:hover .aafiya-blog-image-icon {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+/* Card Content */
+
+.aafiya-blog-card-content {
+
+  display: flex;
+
+  flex: 1;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding: 24px 23px 25px;
+
+}
+
+.aafiya-blog-category {
+
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  padding: 6px 10px;
+
+  background: var(--blog-cream);
+
+  color: #986718;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  line-height: 1.5;
+
+  text-transform: uppercase;
+
+}
+
+.aafiya-blog-card-content h2 {
+
+  width: 100%;
+
+  margin: 0 0 22px;
+
+  color: var(--blog-navy);
+
+  font-family: "Lora", Georgia, serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  line-height: 1.65;
+
+  overflow-wrap: anywhere;
+
+}
+
+.aafiya-blog-card-content h2 a {
+
+  color: inherit;
+
+  transition: color 0.25s ease;
+
+}
+
+.aafiya-blog-card-content h2 a:hover {
+
+  color: var(--blog-gold);
+
+}
+
+/* Read More */
+
+.aafiya-blog-read-more {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: auto;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid var(--blog-gold);
+
+  color: var(--blog-navy);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+
+  transition:
+
+    color 0.25s ease,
+
+    border-color 0.25s ease;
+
+}
+
+.aafiya-blog-read-more svg {
+
+  color: var(--blog-gold);
+
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+
+}
+
+.aafiya-blog-read-more:hover {
+
+  border-color: var(--blog-navy);
+
+  color: var(--blog-gold);
+
+}
+
+.aafiya-blog-read-more:hover svg {
+
+  transform: translateX(5px);
+
+}
+
+/* =====================================================
+
+   LIST VIEW
+
+===================================================== */
+
+.aafiya-blog-grid.is-list-view {
+
+  grid-template-columns: minmax(0, 1fr);
+
+  gap: 20px;
+
+}
+
+.aafiya-blog-card-list {
+
+  display: grid;
+
+  grid-template-columns: 300px minmax(0, 1fr);
+
+  align-items: stretch;
+
+}
+
+.aafiya-blog-card-list .aafiya-blog-card-image {
+
+  height: 100%;
+
+  min-height: 230px;
+
+}
+
+.aafiya-blog-card-list .aafiya-blog-card-content {
+
+  padding: 27px 30px;
+
+}
+
+.aafiya-blog-card-list .aafiya-blog-card-content h2 {
+
+  max-width: 700px;
+
+  font-size: 23px;
+
+}
+
+/* =====================================================
+
+   EMPTY SEARCH STATE
+
+===================================================== */
+
+.aafiya-blog-empty {
+
+  display: flex;
+
+  min-height: 300px;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  border: 1px dashed #e3ded2;
+
+  background: #fcfbf8;
+
+  text-align: center;
+
+}
+
+.aafiya-blog-empty > span {
+
+  display: grid;
+
+  width: 60px;
+
+  height: 60px;
+
+  margin-bottom: 20px;
+
+  place-items: center;
+
+  background: var(--blog-navy);
+
+  color: #f5b94e;
+
+  font-size: 26px;
+
+}
+
+.aafiya-blog-empty h3 {
+
+  margin: 0 0 10px;
+
+  color: var(--blog-navy);
+
+  font-family: "Lora", Georgia, serif;
+
+  font-size: 25px;
+
+}
+
+.aafiya-blog-empty p {
+
+  margin: 0 0 20px;
+
+  color: var(--blog-muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+}
+
+.aafiya-blog-empty button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: 1px solid var(--blog-navy);
+
+  background: var(--blog-navy);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.25s ease;
+
+}
+
+.aafiya-blog-empty button:hover {
+
+  background: var(--blog-gold);
+
+  border-color: var(--blog-gold);
+
+}
+
+/* =====================================================
+
+   PAGINATION
+
+===================================================== */
+
+.aafiya-blog-pagination {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 55px;
+
+}
+
+.aafiya-blog-pagination button {
+
+  display: grid;
+
+  width: 42px;
+
+  height: 42px;
+
+  place-items: center;
+
+  border: 1px solid var(--blog-border);
+
+  border-radius: 0;
+
+  background: #ffffff;
+
+  color: var(--blog-navy);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+
+    background 0.25s ease,
+
+    color 0.25s ease,
+
+    border-color 0.25s ease;
+
+}
+
+.aafiya-blog-pagination button:hover:not(:disabled),
+
+.aafiya-blog-pagination button.is-active {
+
+  border-color: var(--blog-navy);
+
+  background: var(--blog-navy);
+
+  color: #ffffff;
+
+}
+
+.aafiya-blog-pagination button:disabled {
+
+  opacity: 0.35;
+
+  cursor: not-allowed;
+
+}
+
+.aafiya-blog-pagination button svg {
+
+  font-size: 18px;
+
+}
+
+/* =====================================================
+
+   BOTTOM NOTE
+
+===================================================== */
+
+.aafiya-blog-bottom-note {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 60px;
+
+  padding: 24px;
+
+  border: 1px solid #eee5d6;
+
+  background: #fffaf2;
+
+}
+
+.aafiya-blog-bottom-note > svg {
+
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: var(--blog-gold);
+
+  font-size: 20px;
+
+}
+
+.aafiya-blog-bottom-note p {
+
+  margin: 0;
+
+  color: #686d78;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  text-align: center;
+
+}
+
+/* =====================================================
+
+   TABLET
+
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .aafiya-blog-container {
+
+    width: min(100% - 36px, 760px);
+
+  }
+
+  .aafiya-blog-banner {
+
+    min-height: 310px;
+
+  }
+
+  .aafiya-blog-main {
+
+    padding: 70px 0 80px;
+
+  }
+
+  .aafiya-blog-grid {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px 18px;
+
+  }
+
+  .aafiya-blog-card-image {
+
+    height: 215px;
+
+  }
+
+  .aafiya-blog-card-content {
+
+    padding: 21px 19px 23px;
+
+  }
+
+  .aafiya-blog-card-content h2 {
+
+    font-size: 19px;
+
+  }
+
+  .aafiya-blog-card-list {
+
+    grid-template-columns: 250px minmax(0, 1fr);
+
+  }
+
+  .aafiya-blog-card-list .aafiya-blog-card-content h2 {
+
+    font-size: 20px;
+
+  }
+
+  .aafiya-blog-filter-row {
+
+    flex-direction: column;
+
+    gap: 14px;
+
+  }
+
+  .aafiya-blog-filter-label {
+
+    padding-top: 0;
+
+  }
+
+}
+
+/* =====================================================
+
+   MOBILE
+
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .aafiya-blog-container {
+
+    width: calc(100% - 32px);
+
+  }
+
+  .aafiya-blog-banner {
+
+    min-height: 270px;
+
+    padding: 95px 0 45px;
+
+  }
+
+  .aafiya-blog-eyebrow {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+  }
+
+  .aafiya-blog-banner h1 {
+
+    font-size: clamp(32px, 7vw, 41px);
+
+  }
+
+  .aafiya-blog-breadcrumb {
+
+    margin-top: 18px;
+
+    font-size: 11px;
+
+  }
+
+  .aafiya-blog-main {
+
+    padding: 55px 0 65px;
+
+  }
+
+  .aafiya-blog-section-heading {
+
+    margin-bottom: 32px;
+
+  }
+
+  .aafiya-blog-section-eyebrow {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+  }
+
+  .aafiya-blog-section-heading h2 {
+
+    font-size: clamp(28px, 6vw, 35px);
+
+  }
+
+  .aafiya-blog-section-heading p {
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+  }
+
+  .aafiya-blog-toolbar {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 13px;
+
+  }
+
+  .aafiya-blog-search {
+
+    max-width: none;
+
+    height: 47px;
+
+  }
+
+  .aafiya-blog-toolbar-right {
+
+    justify-content: space-between;
+
+  }
+
+  .aafiya-blog-sort {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 43px;
+
+  }
+
+  .aafiya-blog-sort select {
+
+    width: 100%;
+
+    max-width: none;
+
+  }
+
+  .aafiya-blog-view-toggle button {
+
+    width: 34px;
+
+    height: 33px;
+
+  }
+
+  .aafiya-blog-filter-row {
+
+    gap: 12px;
+
+    padding: 17px 0;
+
+  }
+
+  .aafiya-blog-filter-label {
+
+    font-size: 12px;
+
+  }
+
+  .aafiya-blog-categories {
+
+    gap: 7px;
+
+  }
+
+  .aafiya-blog-categories button {
+
+    min-height: 32px;
+
+    padding: 7px 10px;
+
+    font-size: 10px;
+
+  }
+
+  .aafiya-blog-results {
+
+    margin: 21px 0;
+
+  }
+
+  .aafiya-blog-results p,
+
+  .aafiya-blog-reset {
+
+    font-size: 11px;
+
+  }
+
+  .aafiya-blog-grid {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px 12px;
+
+  }
+
+  .aafiya-blog-card-image {
+
+    height: 170px;
+
+  }
+
+  .aafiya-blog-image-icon {
+
+    right: 8px;
+
+    bottom: 8px;
+
+    width: 32px;
+
+    height: 32px;
+
+    font-size: 16px;
+
+    opacity: 1;
+
+    transform: none;
+
+  }
+
+  .aafiya-blog-card-content {
+
+    padding: 15px 13px 17px;
+
+  }
+
+  .aafiya-blog-category {
+
+    margin-bottom: 10px;
+
+    padding: 5px 7px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.4px;
+
+  }
+
+  .aafiya-blog-card-content h2 {
+
+    margin-bottom: 18px;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+
+  }
+
+  .aafiya-blog-read-more {
+
+    gap: 7px;
+
+    font-size: 11px;
+
+  }
+
+  .aafiya-blog-read-more svg {
+
+    font-size: 15px;
+
+  }
+
+  .aafiya-blog-grid.is-list-view {
+
+    gap: 14px;
+
+  }
+
+  .aafiya-blog-card-list {
+
+    grid-template-columns: 135px minmax(0, 1fr);
+
+  }
+
+  .aafiya-blog-card-list .aafiya-blog-card-image {
+
+    height: 100%;
+
+    min-height: 180px;
+
+  }
+
+  .aafiya-blog-card-list .aafiya-blog-card-content {
+
+    padding: 15px 12px;
+
+  }
+
+  .aafiya-blog-card-list .aafiya-blog-card-content h2 {
+
+    font-size: 16px;
+
+  }
+
+  .aafiya-blog-pagination {
+
+    gap: 7px;
+
+    margin-top: 38px;
+
+  }
+
+  .aafiya-blog-pagination button {
+
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 12px;
+
+  }
+
+  .aafiya-blog-bottom-note {
+
+    gap: 10px;
+
+    margin-top: 40px;
+
+    padding: 18px 14px;
+
+  }
+
+  .aafiya-blog-bottom-note p {
+
+    font-size: 12px;
+
+    text-align: left;
+
+  }
+
+}
+
+/* =====================================================
+
+   SMALL MOBILE
+
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .aafiya-blog-container {
+
+    width: calc(100% - 24px);
+
+  }
+
+  .aafiya-blog-grid {
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 20px;
+
+  }
+
+  .aafiya-blog-card-image {
+
+    height: 220px;
+
+  }
+
+  .aafiya-blog-card-content {
+
+    padding: 20px 18px 22px;
+
+  }
+
+  .aafiya-blog-card-content h2 {
+
+    font-size: 19px;
+
+  }
+
+  .aafiya-blog-card-list {
+
+    grid-template-columns: 110px minmax(0, 1fr);
+
+  }
+
+  .aafiya-blog-card-list .aafiya-blog-card-image {
+
+    min-height: 180px;
+
+  }
+
+  .aafiya-blog-card-list .aafiya-blog-card-content {
+
+    padding: 13px 11px;
+
+  }
+
+  .aafiya-blog-card-list .aafiya-blog-card-content h2 {
+
+    font-size: 15px;
+
+  }
+
+  .aafiya-blog-pagination {
+
+    gap: 5px;
+
+  }
+
+  .aafiya-blog-pagination button {
+
+    width: 33px;
+
+    height: 33px;
+
+  }
+
+}
+
+/* =====================================================
+
+   ACCESSIBILITY
+
+===================================================== */
+
+.aafiya-blog-page button:focus-visible,
+
+.aafiya-blog-page a:focus-visible,
+
+.aafiya-blog-page input:focus-visible,
+
+.aafiya-blog-page select:focus-visible {
+
+  outline: 3px solid rgba(188, 134, 52, 0.5);
+
+  outline-offset: 3px;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .aafiya-blog-page *,
+
+  .aafiya-blog-page *::before,
+
+  .aafiya-blog-page *::after {
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+
+    animation-duration: 0.01ms !important;
+
+  }
+
+}
+
+/* =========================================
+
+   BLOG SEARCH INPUT - FIX OVERLAPPING BORDERS
+
+========================================= */
+
+.aafiya-blog-page .aafiya-blog-search {
+
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+
+  max-width: 480px;
+
+  height: 52px;
+
+  min-height: 52px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d59a2a;
+
+  border-radius: 0;
+
+  outline: none;
+
+  box-shadow: none;
+
+  background: #fff;
+
+  box-sizing: border-box;
+
+}
+
+.aafiya-blog-page .aafiya-blog-search:focus-within {
+
+  border-color: #d59a2a;
+
+  outline: none;
+
+  box-shadow: 0 0 0 2px rgba(213, 154, 42, 0.12);
+
+}
+
+.aafiya-blog-page .aafiya-blog-search > svg {
+
+  display: block;
+
+  flex: 0 0 18px;
+
+  width: 18px;
+
+  height: 18px;
+
+  margin: 0;
+
+}
+
+.aafiya-blog-page .aafiya-blog-search input,
+
+.aafiya-blog-page .aafiya-blog-search input[type="search"] {
+
+  display: block;
+
+  flex: 1 1 auto;
+
+  width: 0;
+
+  min-width: 0;
+
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0 !important;
+
+  border-radius: 0;
+
+  outline: none !important;
+
+  box-shadow: none !important;
+
+  background: transparent;
+
+  color: #0d1741;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: normal;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+}
+
+.aafiya-blog-page .aafiya-blog-search input:focus,
+
+.aafiya-blog-page .aafiya-blog-search input[type="search"]:focus {
+
+  border: 0 !important;
+
+  outline: none !important;
+
+  box-shadow: none !important;
+
+}
+
+.aafiya-blog-page .aafiya-blog-search input::placeholder {
+
+  color: #9699a3;
+
+  opacity: 1;
+
+}
+
+/* Remove theme-level pseudo borders */
+
+.aafiya-blog-page .aafiya-blog-search::before,
+
+.aafiya-blog-page .aafiya-blog-search::after {
+
+  content: none !important;
+
+  display: none !important;
+
+}
+
+/* =========================================
+
+   BLOG IMAGE - FULL COVER, NO DISTORTION
+
+========================================= */
+
+.aafiya-blog-page .aafiya-blog-card {
+
+  min-width: 0;
+
+  overflow: hidden;
+
+}
+
+.aafiya-blog-page .aafiya-blog-card-image {
+
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  height: auto;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: #f2eee7;
+
+}
+
+.aafiya-blog-page .aafiya-blog-card-image img {
+
+  display: block;
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+  max-width: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  object-fit: cover !important;
+
+  object-position: center center;
+
+  border: 0;
+
+  border-radius: 0;
+
+  transform: none;
+
+  transition: transform 0.6s ease;
+
+}
+
+.aafiya-blog-page .aafiya-blog-card:hover
+
+.aafiya-blog-card-image img {
+
+  transform: scale(1.035);
+
+}
+
+/* Wide images on desktop */
+
+@media (min-width: 992px) {
+
+  .aafiya-blog-page .aafiya-blog-card-image {
+
+    aspect-ratio: 16 / 10;
+
+  }
+
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+  .aafiya-blog-page .aafiya-blog-card-image {
+
+    aspect-ratio: 4 / 3;
+
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+  .aafiya-blog-page .aafiya-blog-search {
+
+    max-width: none;
+
+    width: 100%;
+
+    height: 48px;
+
+    min-height: 48px;
+
+  }
+
+  .aafiya-blog-page .aafiya-blog-grid:not(.is-list-view)
+
+  .aafiya-blog-card-image {
+
+    aspect-ratio: 4 / 3;
+
+  }
+
+  .aafiya-blog-page .aafiya-blog-card-list
+
+  .aafiya-blog-card-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    aspect-ratio: auto;
+
+  }
+
+}
+
+/* Small mobile */
+
+@media (max-width: 420px) {
+
+  .aafiya-blog-page .aafiya-blog-grid:not(.is-list-view)
+
+  .aafiya-blog-card-image {
+
+    aspect-ratio: 16 / 10;
+
+  }
+
+}
+
+/* BLOG CARDS - MATCH LIVE WEBSITE IMAGE DISPLAY */
+
+.aafiya-blog-page .aafiya-blog-card-image {
+
+  display: block;
+
+  position: relative;
+
+  width: 100%;
+
+  height: auto !important;
+
+  min-height: 0 !important;
+
+  aspect-ratio: auto !important;
+
+  overflow: hidden;
+
+  background: #f5f3ef;
+
+  line-height: 0;
+
+}
+
+.aafiya-blog-page .aafiya-blog-card-image img {
+
+  display: block;
+
+  width: 100% !important;
+
+  height: auto !important;
+
+  aspect-ratio: auto !important;
+
+  max-width: 100%;
+
+  object-fit: initial !important;
+
+  object-position: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  transform: none !important;
+
+}
+
+/* Keep the original image proportions in every screen size */
+
+@media (max-width: 991px) {
+
+  .aafiya-blog-page .aafiya-blog-card-image {
+
+    height: auto !important;
+
+    aspect-ratio: auto !important;
+
+  }
+
+  .aafiya-blog-page .aafiya-blog-card-image img {
+
+    height: auto !important;
+
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .aafiya-blog-page .aafiya-blog-grid:not(.is-list-view)
+
+  .aafiya-blog-card-image {
+
+    aspect-ratio: auto !important;
+
+  }
+
+  .aafiya-blog-page .aafiya-blog-grid:not(.is-list-view)
+
+  .aafiya-blog-card-image img {
+
+    height: auto !important;
+
+  }
+
+}

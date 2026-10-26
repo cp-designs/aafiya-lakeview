@@ -1,0 +1,1094 @@
+
+/* =========================================
+   AAFIYA LAKEVIEW — CONTACT PAGE
+   Theme matched with existing website CSS
+   Navy: rgb(13, 23, 65)
+   Gold: #D5A85B
+   Heading: Poppins
+   Body: Montserrat
+========================================= */
+
+.aafiya-contact-banner,
+.aafiya-contact-info,
+.aafiya-contact-main,
+.aafiya-contact-map {
+  --contact-navy: rgb(13, 23, 65);
+  --contact-navy-dark: #080f30;
+  --contact-gold: #d5a85b;
+  --contact-gold-dark: #b78b43;
+  --contact-text: #535c70;
+  --contact-muted: #7b8291;
+  --contact-border: #e7e9f0;
+  --contact-bg: #f8f9fc;
+  --contact-white: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+.aafiya-contact-banner *,
+.aafiya-contact-info *,
+.aafiya-contact-main *,
+.aafiya-contact-map * {
+  box-sizing: border-box;
+}
+
+.aafiya-contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+/* =========================================
+   PAGE BANNER
+========================================= */
+
+.aafiya-contact-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 260px;
+  padding: 60px 0;
+  overflow: hidden;
+  color: var(--contact-white);
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(213, 168, 91, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #080f30 0%,
+      rgb(13, 23, 65) 65%,
+      #192750 100%
+    );
+}
+
+.aafiya-contact-banner::before {
+  position: absolute;
+  top: -160px;
+  right: 8%;
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgba(213, 168, 91, 0.25);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.aafiya-contact-banner::after {
+  position: absolute;
+  right: 18%;
+  bottom: -180px;
+  width: 290px;
+  height: 290px;
+  border: 1px solid rgba(213, 168, 91, 0.2);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.aafiya-contact-banner .aafiya-contact-container {
+  position: relative;
+  z-index: 1;
+}
+
+.aafiya-contact-banner h1 {
+  max-width: 950px;
+  margin: 0 0 22px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.6px;
+  overflow-wrap: anywhere;
+}
+
+.aafiya-contact-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.aafiya-contact-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--contact-gold);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.aafiya-contact-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.aafiya-contact-breadcrumb a svg {
+  width: 15px;
+  height: 15px;
+}
+
+.aafiya-contact-breadcrumb > span:nth-child(2) {
+  color: var(--contact-gold);
+}
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.aafiya-contact-info {
+  padding: 70px 0 45px;
+  background: #ffffff;
+}
+
+.aafiya-contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.aafiya-contact-info-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 220px;
+  padding: 32px 26px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid var(--contact-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(13, 23, 65, 0.055);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.aafiya-contact-info-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(213, 168, 91, 0.75);
+  box-shadow: 0 15px 35px rgba(13, 23, 65, 0.1);
+}
+
+.aafiya-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 17px;
+  color: #ffffff;
+  background: rgb(13, 23, 65);
+  border: 1px solid rgba(213, 168, 91, 0.8);
+  border-radius: 50%;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.aafiya-contact-info-card:hover .aafiya-contact-icon {
+  color: var(--contact-navy);
+  background: var(--contact-gold);
+  transform: translateY(-2px);
+}
+
+.aafiya-contact-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 1.8;
+}
+
+.aafiya-contact-info-card h3 {
+  margin: 0 0 11px;
+  color: var(--contact-navy);
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.aafiya-contact-info-card a {
+  max-width: 100%;
+  color: var(--contact-text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.9;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.25s ease;
+}
+
+.aafiya-contact-info-card a:hover {
+  color: var(--contact-gold-dark);
+}
+
+/* =========================================
+   CONTACT FORM SECTION
+========================================= */
+
+.aafiya-contact-main {
+  padding: 30px 0 85px;
+  background: #ffffff;
+}
+
+.aafiya-contact-form-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 45px;
+  background: #ffffff;
+  border: 1px solid var(--contact-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(13, 23, 65, 0.06);
+}
+
+/* Heading */
+
+.aafiya-contact-section-title {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.aafiya-contact-section-title img {
+  display: block;
+  width: 150px;
+  max-width: 100%;
+  max-height: 120px;
+  height: auto;
+  margin: 0 auto 20px;
+  object-fit: contain;
+}
+
+.aafiya-contact-section-title h2 {
+  margin: 0 0 14px;
+  color: var(--contact-navy);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+
+.aafiya-contact-section-title p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--contact-muted);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.aafiya-contact-form {
+  width: 100%;
+  margin: 0;
+}
+
+.aafiya-contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.aafiya-contact-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.aafiya-contact-field.full-width,
+.aafiya-contact-submit.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Inputs */
+
+.aafiya-contact-field input,
+.aafiya-contact-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 15px 17px;
+  color: var(--contact-navy);
+  background: #fbfcfe;
+  border: 1px solid #dfe4ed;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.aafiya-contact-field input {
+  height: 54px;
+}
+
+.aafiya-contact-field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.aafiya-contact-field input::placeholder,
+.aafiya-contact-field textarea::placeholder {
+  color: #858d9d;
+  opacity: 1;
+}
+
+.aafiya-contact-field input:hover,
+.aafiya-contact-field textarea:hover {
+  border-color: #c2cad8;
+}
+
+.aafiya-contact-field input:focus,
+.aafiya-contact-field textarea:focus {
+  background: #ffffff;
+  border-color: var(--contact-gold);
+  box-shadow: 0 0 0 3px rgba(213, 168, 91, 0.15);
+}
+
+.aafiya-contact-field input:focus-visible,
+.aafiya-contact-field textarea:focus-visible {
+  outline: 2px solid transparent;
+}
+
+/* CAPTCHA */
+
+.aafiya-contact-field.captcha-field {
+  max-width: 100%;
+}
+
+.aafiya-contact-field.captcha-field label {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--contact-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* Remove number input arrows */
+
+.aafiya-contact-field input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.aafiya-contact-field input[type="number"]::-webkit-inner-spin-button,
+.aafiya-contact-field input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* =========================================
+   ALERT MESSAGES
+========================================= */
+
+.aafiya-contact-alert {
+  margin: 0 0 24px;
+  padding: 14px 17px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.aafiya-contact-alert.success {
+  color: #17643a;
+  background: #edf9f0;
+  border-color: #bce7ca;
+}
+
+.aafiya-contact-alert.error {
+  color: #962727;
+  background: #fff1f1;
+  border-color: #f1caca;
+}
+
+/* =========================================
+   SEND MESSAGE BUTTON
+========================================= */
+
+.aafiya-contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2px;
+}
+
+.aafiya-contact-submit button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 52px;
+  padding: 14px 27px;
+  color: #ffffff;
+  background: rgb(13, 23, 65);
+  border: 1px solid rgb(13, 23, 65);
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  line-height: 1.5;
+  cursor: pointer;
+  box-shadow: 0 5px 16px rgba(13, 23, 65, 0.12);
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.aafiya-contact-submit button:hover {
+  color: var(--contact-navy);
+  background: var(--contact-gold);
+  border-color: var(--contact-gold);
+  box-shadow: 0 8px 22px rgba(13, 23, 65, 0.15);
+  transform: translateY(-2px);
+}
+
+.aafiya-contact-submit button:focus-visible {
+  outline: 3px solid rgba(213, 168, 91, 0.6);
+  outline-offset: 4px;
+}
+
+.aafiya-contact-submit button:active {
+  transform: translateY(0);
+}
+
+.aafiya-contact-submit button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.aafiya-contact-submit button:hover svg {
+  transform: translateX(3px);
+}
+
+/* =========================================
+   GOOGLE MAP
+========================================= */
+
+.aafiya-contact-map {
+  width: 100%;
+  overflow: hidden;
+  background: #f1f3f7;
+  line-height: 0;
+}
+
+.aafiya-contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 991.98px) {
+  .aafiya-contact-container {
+    max-width: 900px;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .aafiya-contact-banner {
+    min-height: 235px;
+    padding: 52px 0;
+  }
+
+  .aafiya-contact-banner h1 {
+    font-size: clamp(29px, 4.5vw, 39px);
+  }
+
+  .aafiya-contact-info {
+    padding: 55px 0 35px;
+  }
+
+  .aafiya-contact-info-grid {
+    gap: 20px;
+  }
+
+  .aafiya-contact-info-card {
+    min-height: 205px;
+    padding: 27px 20px;
+  }
+
+  .aafiya-contact-form-wrapper {
+    padding: 35px 30px;
+  }
+
+  .aafiya-contact-main {
+    padding: 25px 0 65px;
+  }
+
+  .aafiya-contact-form-grid {
+    gap: 18px;
+  }
+
+  .aafiya-contact-map iframe {
+    height: 400px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 767.98px) {
+  .aafiya-contact-container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .aafiya-contact-banner {
+    min-height: 205px;
+    padding: 42px 0;
+  }
+
+  .aafiya-contact-banner h1 {
+    max-width: 100%;
+    margin-bottom: 16px;
+    font-size: clamp(26px, 6vw, 34px);
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+  }
+
+  .aafiya-contact-breadcrumb {
+    gap: 9px;
+    font-size: 12px;
+  }
+
+  .aafiya-contact-banner::before {
+    right: -130px;
+  }
+
+  .aafiya-contact-banner::after {
+    right: 4%;
+  }
+
+  .aafiya-contact-info {
+    padding: 38px 0 22px;
+  }
+
+  .aafiya-contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .aafiya-contact-info-card {
+    min-height: auto;
+    padding: 25px 19px;
+  }
+
+  .aafiya-contact-icon {
+    width: 53px;
+    height: 53px;
+    margin-bottom: 14px;
+  }
+
+  .aafiya-contact-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .aafiya-contact-info-card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .aafiya-contact-info-card a {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .aafiya-contact-main {
+    padding: 18px 0 48px;
+  }
+
+  .aafiya-contact-form-wrapper {
+    padding: 28px 20px;
+    border-radius: 8px;
+  }
+
+  .aafiya-contact-section-title {
+    margin-bottom: 26px;
+  }
+
+  .aafiya-contact-section-title img {
+    width: 125px;
+    margin-bottom: 17px;
+  }
+
+  .aafiya-contact-section-title h2 {
+    font-size: clamp(24px, 5.8vw, 31px);
+    line-height: 1.45;
+  }
+
+  .aafiya-contact-section-title p {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .aafiya-contact-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .aafiya-contact-field.full-width,
+  .aafiya-contact-submit.full-width {
+    grid-column: auto;
+  }
+
+  .aafiya-contact-field input {
+    height: 51px;
+  }
+
+  .aafiya-contact-field input,
+  .aafiya-contact-field textarea {
+    padding: 13px 14px;
+    font-size: 12px;
+  }
+
+  .aafiya-contact-field textarea {
+    min-height: 130px;
+  }
+
+  .aafiya-contact-field.captcha-field label {
+    font-size: 12px;
+  }
+
+  .aafiya-contact-submit {
+    justify-content: stretch;
+  }
+
+  .aafiya-contact-submit button {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 18px;
+    font-size: 12px;
+  }
+
+  .aafiya-contact-alert {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .aafiya-contact-map iframe {
+    height: 330px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .aafiya-contact-container {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .aafiya-contact-banner {
+    min-height: 185px;
+    padding: 34px 0;
+  }
+
+  .aafiya-contact-banner h1 {
+    font-size: 25px;
+    line-height: 1.45;
+  }
+
+  .aafiya-contact-breadcrumb {
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .aafiya-contact-info {
+    padding: 28px 0 18px;
+  }
+
+  .aafiya-contact-info-grid {
+    gap: 13px;
+  }
+
+  .aafiya-contact-info-card {
+    padding: 22px 15px;
+  }
+
+  .aafiya-contact-info-card h3 {
+    font-size: 19px;
+  }
+
+  .aafiya-contact-info-card a {
+    font-size: 11px;
+  }
+
+  .aafiya-contact-main {
+    padding: 17px 0 36px;
+  }
+
+  .aafiya-contact-form-wrapper {
+    padding: 23px 14px;
+  }
+
+  .aafiya-contact-section-title img {
+    width: 110px;
+    margin-bottom: 15px;
+  }
+
+  .aafiya-contact-section-title h2 {
+    font-size: 23px;
+    line-height: 1.5;
+  }
+
+  .aafiya-contact-section-title p {
+    font-size: 11px;
+  }
+
+  .aafiya-contact-form-grid {
+    gap: 14px;
+  }
+
+  .aafiya-contact-field input {
+    height: 48px;
+  }
+
+  .aafiya-contact-field textarea {
+    min-height: 120px;
+  }
+
+  .aafiya-contact-submit button {
+    min-height: 48px;
+  }
+
+  .aafiya-contact-map iframe {
+    height: 280px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+  .aafiya-contact-banner h1 {
+    font-size: 23px;
+  }
+
+  .aafiya-contact-form-wrapper {
+    padding: 20px 12px;
+  }
+
+  .aafiya-contact-section-title h2 {
+    font-size: 21px;
+  }
+
+  .aafiya-contact-field input,
+  .aafiya-contact-field textarea {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .aafiya-contact-banner *,
+  .aafiya-contact-info *,
+  .aafiya-contact-main *,
+  .aafiya-contact-map * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* FINAL FIX — CONTACT PAGE STARTS BELOW HEADER */
+
+.aafiya-contact-banner {
+  margin-top: 0 !important;
+  padding-top: 45px !important;
+  min-height: 260px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.aafiya-contact-banner .aafiya-contact-container {
+  position: relative !important;
+  z-index: 5 !important;
+  padding-top: 0 !important;
+}
+
+.aafiya-contact-banner h1 {
+  position: relative !important;
+  margin-top: 0 !important;
+  transform: none !important;
+}
+
+/* =========================================
+   CONTACT BANNER — HEADER OVERLAP FIX
+========================================= */
+
+.aafiya-contact-banner {
+  position: relative;
+  min-height: 260px;
+  padding: 45px 0 55px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.aafiya-contact-banner .aafiya-contact-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.aafiya-contact-banner h1 {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #ffffff;
+}
+
+.aafiya-contact-breadcrumb {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Tablet */
+@media (max-width: 767px) {
+  .aafiya-contact-banner {
+    min-height: 220px;
+    padding: 35px 0 40px;
+  }
+
+  .aafiya-contact-banner .aafiya-contact-container {
+    padding: 0 18px;
+  }
+
+  .aafiya-contact-banner h1 {
+    font-size: clamp(25px, 6vw, 34px);
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .aafiya-contact-banner {
+    min-height: 190px;
+    padding: 30px 0 35px;
+  }
+
+  .aafiya-contact-banner .aafiya-contact-container {
+    padding: 0 14px;
+  }
+
+  .aafiya-contact-banner h1 {
+    font-size: 25px;
+  }
+}
+
+
+/* If the header is fixed, reserve its space on the page */
+body:has(.aafiya-contact-banner) {
+  scroll-padding-top: 90px;
+}
+
+@media (max-width: 767px) {
+  .aafiya-contact-banner {
+    min-height: 220px !important;
+    padding-top: 35px !important;
+  }
+}
+
+/* CONTACT PAGE — FINAL BANNER POSITION FIX */
+
+.aafiya-contact-banner {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 260px !important;
+  padding: 30px 0 45px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.aafiya-contact-banner > .aafiya-contact-container {
+  position: relative !important;
+  z-index: 5 !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+.aafiya-contact-banner h1 {
+  display: block !important;
+  position: static !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  transform: none !important;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: clamp(28px, 4vw, 44px) !important;
+  line-height: 1.35 !important;
+}
+
+.aafiya-contact-banner .aafiya-contact-breadcrumb {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Tablet */
+@media (max-width: 767px) {
+  .aafiya-contact-banner {
+    min-height: 220px !important;
+    padding: 30px 0 35px !important;
+  }
+
+  .aafiya-contact-banner > .aafiya-contact-container {
+    padding: 0 18px !important;
+  }
+
+  .aafiya-contact-banner h1 {
+    font-size: clamp(25px, 6vw, 34px) !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .aafiya-contact-banner {
+    min-height: 190px !important;
+    padding: 25px 0 30px !important;
+  }
+
+  .aafiya-contact-banner > .aafiya-contact-container {
+    padding: 0 14px !important;
+  }
+
+  .aafiya-contact-banner h1 {
+    font-size: 25px !important;
+  }
+}
+
+/* ==========================================
+   AAFIYA CONTACT PAGE — NAVBAR CLEARANCE
+========================================== */
+
+/* Keep the header above page content */
+header.aafiya-header {
+  position: relative;
+  z-index: 1050;
+}
+
+/* Start the banner below the header */
+header.aafiya-header + .aafiya-contact-banner {
+  margin-top: 0 !important;
+}
+
+/* Correct banner content placement */
+.aafiya-contact-banner {
+  min-height: 260px !important;
+  padding: 32px 0 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden;
+}
+
+.aafiya-contact-banner > .aafiya-contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.aafiya-contact-banner h1 {
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  line-height: 1.35 !important;
+  transform: none !important;
+}
+
+/* Tablet */
+@media (max-width: 767px) {
+  .aafiya-contact-banner {
+    min-height: 220px !important;
+    padding: 28px 0 35px !important;
+  }
+
+  .aafiya-contact-banner > .aafiya-contact-container {
+    padding: 0 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .aafiya-contact-banner {
+    min-height: 190px !important;
+    padding: 24px 0 30px !important;
+  }
+
+  .aafiya-contact-banner > .aafiya-contact-container {
+    padding: 0 14px;
+  }
+}

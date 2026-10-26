@@ -1,0 +1,902 @@
+
+/* ==========================================
+   AAFIYA LAKEVIEW - HEADER STYLES
+   File: src/components/layout/Header.css
+========================================== */
+
+.aafiya-header {
+  width: 100%;
+  z-index: 1050;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
+}
+
+.aafiya-header .navbar-area,
+.aafiya-header .main-nav {
+  width: 100%;
+  background: #fff;
+}
+
+.aafiya-header .navbar {
+  min-height: 88px;
+  padding: 10px 0;
+}
+
+.aafiya-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aafiya-header .navbar-brand {
+  flex: 0 0 auto;
+  margin: 0 28px 0 0;
+  padding: 0;
+}
+
+.aafiya-header .navbar-brand img {
+  display: block;
+  width: auto;
+  max-width: 190px;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.aafiya-header .navbar-collapse {
+  align-items: center;
+  flex: 1;
+}
+
+.aafiya-header .navbar-nav {
+  align-items: center;
+  gap: 2px;
+}
+
+.aafiya-header .navbar-nav .nav-item {
+  position: relative;
+}
+
+.aafiya-header .navbar-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 10px;
+  color: #252525;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.aafiya-header .navbar-nav .nav-link:hover,
+.aafiya-header .navbar-nav .nav-link:focus,
+.aafiya-header .navbar-nav .nav-item.rooms-open > .nav-link {
+  color: #bc8634;
+}
+
+.aafiya-header .aafiya-rooms-toggle {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.aafiya-header .aafiya-rooms-toggle svg {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.aafiya-header .rooms-open .aafiya-rooms-toggle svg {
+  transform: rotate(180deg);
+}
+
+/* Rooms dropdown */
+
+.aafiya-header .aafiya-rooms-item > .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 265px;
+  max-width: 340px;
+  margin: 0;
+  padding: 8px 0;
+  border: 1px solid rgba(188, 134, 52, 0.15);
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+  z-index: 1100;
+}
+
+.aafiya-header .aafiya-rooms-item:hover > .dropdown-menu,
+.aafiya-header .aafiya-rooms-item:focus-within > .dropdown-menu,
+.aafiya-header .aafiya-rooms-item.rooms-open > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.aafiya-header .aafiya-rooms-item .dropdown-menu .nav-item {
+  width: 100%;
+}
+
+.aafiya-header .aafiya-rooms-item .dropdown-menu .nav-link {
+  display: block;
+  width: 100%;
+  padding: 11px 18px;
+  justify-content: flex-start;
+  white-space: normal;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.aafiya-header .aafiya-rooms-item .dropdown-menu .nav-link:hover {
+  background: #fbf6ee;
+}
+
+/* Reservation button */
+
+.aafiya-header .others-option {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.aafiya-header .others-option .call-us {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #bc8634 0%, #a06f2a 100%);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(188, 134, 52, 0.25);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.aafiya-header .others-option .call-us:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(188, 134, 52, 0.35);
+}
+
+.aafiya-header .others-option .call-us svg {
+  flex-shrink: 0;
+}
+
+.aafiya-header .reservation-text {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Mobile menu toggle */
+
+.aafiya-header .aafiya-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 42px;
+  padding: 10px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid rgba(188, 134, 52, 0.35);
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.aafiya-header .aafiya-menu-toggle span {
+  display: block;
+  width: 21px;
+  height: 2px;
+  border-radius: 2px;
+  background: #bc8634;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.aafiya-header .aafiya-menu-toggle.is-active span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.aafiya-header .aafiya-menu-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.aafiya-header .aafiya-menu-toggle.is-active span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 1199px) {
+  .aafiya-header .navbar-brand {
+    margin-right: 16px;
+  }
+
+  .aafiya-header .navbar-brand img {
+    max-width: 165px;
+    max-height: 62px;
+  }
+
+  .aafiya-header .navbar-nav .nav-link {
+    padding-right: 7px;
+    padding-left: 7px;
+    font-size: 13px;
+  }
+
+  .aafiya-header .others-option {
+    margin-left: 8px;
+  }
+
+  .aafiya-header .others-option .call-us {
+    padding: 10px 13px;
+  }
+
+  .aafiya-header .reservation-text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 991px) {
+  .aafiya-header .navbar {
+    min-height: 76px;
+  }
+
+  .aafiya-header .navbar-brand img {
+    max-width: 175px;
+    max-height: 58px;
+  }
+
+  .aafiya-header .aafiya-menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .aafiya-header .navbar-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
+    padding: 12px 20px 22px;
+    background: #fff;
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.1);
+  }
+
+  .aafiya-header .navbar-collapse.show {
+    display: block;
+  }
+
+  .aafiya-header .navbar-nav {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .aafiya-header .navbar-nav .nav-item {
+    width: 100%;
+    border-bottom: 1px solid #f0ece6;
+  }
+
+  .aafiya-header .navbar-nav .nav-link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 13px 4px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .aafiya-header .aafiya-rooms-item > .dropdown-menu {
+    display: none;
+    position: static;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 0 0 8px 12px;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .aafiya-header
+    .aafiya-rooms-item.rooms-open
+    > .dropdown-menu {
+    display: block;
+  }
+
+  .aafiya-header .aafiya-rooms-item .dropdown-menu .nav-item {
+    border-bottom: 0;
+  }
+
+  .aafiya-header .aafiya-rooms-item .dropdown-menu .nav-link {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .aafiya-header .others-option {
+    margin: 15px 0 0;
+  }
+
+  .aafiya-header .others-option .call-us {
+    padding: 11px 18px;
+  }
+
+  .aafiya-header .reservation-text {
+    display: inline;
+    font-size: 12px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 576px) {
+  .aafiya-header .navbar {
+    min-height: 68px;
+    padding: 8px 0;
+  }
+
+  .aafiya-header .navbar-brand img {
+    max-width: 145px;
+    max-height: 50px;
+  }
+
+  .aafiya-header .aafiya-menu-toggle {
+    width: 40px;
+    height: 39px;
+  }
+
+  .aafiya-header .navbar-collapse {
+    max-height: calc(100vh - 68px);
+    padding: 10px 16px 20px;
+  }
+
+  .aafiya-header .others-option .call-us {
+    padding: 9px 14px;
+  }
+
+  .aafiya-header .others-option .call-us svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .aafiya-header .reservation-text {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .aafiya-header .navbar-brand img {
+    max-width: 125px;
+    max-height: 46px;
+  }
+
+  .aafiya-header .aafiya-menu-toggle {
+    width: 38px;
+    height: 37px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aafiya-header *,
+  .aafiya-header *::before,
+  .aafiya-header *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================
+   AAFIYA HEADER - DESKTOP VISIBILITY FIX
+========================================== */
+
+.aafiya-header {
+  width: 100%;
+  background: #fff;
+  z-index: 1050;
+}
+
+.aafiya-header .main-nav,
+.aafiya-header .navbar-area,
+.aafiya-header nav.navbar {
+  width: 100%;
+  background: #fff;
+}
+
+.aafiya-header nav.navbar {
+  display: block;
+  min-height: 88px;
+  padding: 10px 0;
+}
+
+.aafiya-header nav.navbar > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.aafiya-header .navbar-brand {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 24px 0 0;
+}
+
+.aafiya-header .navbar-brand img {
+  display: block;
+  width: 190px;
+  height: auto;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.aafiya-header #aafiya-navbar.collapse,
+.aafiya-header #aafiya-navbar.navbar-collapse {
+  display: flex !important;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  visibility: visible !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.aafiya-header #aafiya-navbar .navbar-nav {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin: 0 auto !important;
+  padding: 0;
+  list-style: none !important;
+  gap: 2px;
+}
+
+.aafiya-header #aafiya-navbar .navbar-nav > .nav-item {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
+}
+
+.aafiya-header #aafiya-navbar .navbar-nav > .nav-item > .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 9px;
+  color: #252525;
+  font-size: 13px;
+  line-height: 1.5;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.aafiya-header #aafiya-navbar .navbar-nav > .nav-item > .nav-link:hover {
+  color: #bc8634;
+}
+
+.aafiya-header .aafiya-rooms-toggle {
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.aafiya-header #aafiya-navbar .aafiya-rooms-item > .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 270px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1100;
+}
+
+.aafiya-header #aafiya-navbar .aafiya-rooms-item:hover > .dropdown-menu,
+.aafiya-header #aafiya-navbar .aafiya-rooms-item:focus-within > .dropdown-menu,
+.aafiya-header #aafiya-navbar .aafiya-rooms-item.rooms-open > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.aafiya-header #aafiya-navbar .dropdown-menu .nav-link {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  color: #252525;
+  white-space: normal;
+  text-decoration: none !important;
+}
+
+.aafiya-header #aafiya-navbar .dropdown-menu .nav-link:hover {
+  background: #fbf6ee;
+  color: #bc8634;
+}
+
+.aafiya-header .others-option {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.aafiya-header .others-option .call-us {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #bc8634, #a06f2a);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.aafiya-header .reservation-text {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.aafiya-header .aafiya-menu-toggle {
+  display: none;
+}
+
+/* Tablet and mobile navigation */
+
+@media (max-width: 991px) {
+  .aafiya-header nav.navbar {
+    min-height: 76px;
+  }
+
+  .aafiya-header .navbar-brand img {
+    width: 165px;
+    max-height: 58px;
+  }
+
+  .aafiya-header .aafiya-menu-toggle {
+    display: flex;
+  }
+
+  .aafiya-header #aafiya-navbar.collapse,
+  .aafiya-header #aafiya-navbar.navbar-collapse {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 76px);
+    overflow-y: auto !important;
+    padding: 12px 20px 22px;
+    background: #fff;
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.1);
+  }
+
+  .aafiya-header #aafiya-navbar.show {
+    display: block !important;
+  }
+
+  .aafiya-header #aafiya-navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin: 0 !important;
+    gap: 0;
+  }
+
+  .aafiya-header #aafiya-navbar .navbar-nav > .nav-item {
+    width: 100%;
+    border-bottom: 1px solid #f0ece6;
+  }
+
+  .aafiya-header #aafiya-navbar .navbar-nav > .nav-item > .nav-link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 13px 4px;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .aafiya-header #aafiya-navbar .aafiya-rooms-item > .dropdown-menu {
+    display: none;
+    position: static;
+    min-width: 0;
+    width: 100%;
+    padding: 0 0 8px 12px;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .aafiya-header #aafiya-navbar .aafiya-rooms-item.rooms-open > .dropdown-menu {
+    display: block;
+  }
+
+  .aafiya-header .others-option {
+    margin: 15px 0 0;
+  }
+
+  .aafiya-header .reservation-text {
+    display: inline;
+  }
+}
+
+@media (max-width: 576px) {
+  .aafiya-header .navbar-brand img {
+    width: 145px;
+    max-height: 50px;
+  }
+
+  .aafiya-header .reservation-text {
+    display: none;
+  }
+}
+
+/* Fix: keep desktop navigation visible */
+@media (min-width: 992px) {
+  .aafiya-header #aafiya-navbar.collapse,
+  .aafiya-header #aafiya-navbar.navbar-collapse,
+  .aafiya-header #aafiya-navbar.mean-menu {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .aafiya-header #aafiya-navbar .navbar-nav {
+    display: flex !important;
+  }
+
+  .aafiya-header #aafiya-navbar .navbar-nav > .nav-item {
+    display: block !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .aafiya-header #aafiya-navbar.collapse:not(.show),
+  .aafiya-header #aafiya-navbar.navbar-collapse:not(.show) {
+    display: none !important;
+  }
+
+  .aafiya-header #aafiya-navbar.show {
+    display: block !important;
+  }
+}
+
+/* Aafiya: force desktop navbar open */
+@media screen and (min-width: 992px) {
+  html body header.aafiya-header #aafiya-navbar.collapse.navbar-collapse.mean-menu {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  html body header.aafiya-header #aafiya-navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  html body header.aafiya-header #aafiya-navbar .navbar-nav > .nav-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+
+/* Aafiya Header Typography */
+
+/* Navigation and body/UI text - Montserrat */
+.aafiya-header .navbar-nav .nav-link,
+.aafiya-header .others-option .call-us,
+.aafiya-header .reservation-text,
+.aafiya-header .dropdown-menu {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* Heading typography - Poppins */
+.aafiya-header h1,
+.aafiya-header h2,
+.aafiya-header h3,
+.aafiya-header h4,
+.aafiya-header h5,
+.aafiya-header h6 {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Navigation styling */
+.aafiya-header .navbar-nav .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.aafiya-header .reservation-text {
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+/* ==========================================
+   AAFIYA HEADER - TRANSPARENT TO SCROLLED
+   Append at the END of Header.css
+========================================== */
+
+/* At page top: transparent black navbar */
+.aafiya-header.is-transparent,
+.aafiya-header.is-transparent .navbar-area,
+.aafiya-header.is-transparent .main-nav,
+.aafiya-header.is-transparent nav.navbar {
+  background: rgba(0, 0, 0, 0.48) !important;
+  box-shadow: none !important;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Scrolled: solid dark grey navbar */
+.aafiya-header.is-scrolled,
+.aafiya-header.is-scrolled .navbar-area,
+.aafiya-header.is-scrolled .main-nav,
+.aafiya-header.is-scrolled nav.navbar {
+  background: #303437 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15) !important;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* White navigation text in both states */
+.aafiya-header.is-transparent .navbar-nav .nav-link,
+.aafiya-header.is-scrolled .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+/* Gold hover */
+.aafiya-header.is-transparent .navbar-nav .nav-link:hover,
+.aafiya-header.is-scrolled .navbar-nav .nav-link:hover {
+  color: #d5a85b !important;
+}
+
+/* Keep dropdown menu readable */
+.aafiya-header .aafiya-rooms-item > .dropdown-menu {
+  background: #fff !important;
+}
+
+.aafiya-header .aafiya-rooms-item .dropdown-menu .nav-link {
+  color: #252525 !important;
+}
+
+.aafiya-header .aafiya-rooms-item .dropdown-menu .nav-link:hover {
+  color: #bc8634 !important;
+  background: #fbf6ee !important;
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .aafiya-header.is-transparent #aafiya-navbar,
+  .aafiya-header.is-scrolled #aafiya-navbar {
+    background: #303437 !important;
+  }
+
+  .aafiya-header .aafiya-menu-toggle {
+    background: #fff !important;
+  }
+}
+
+/* ==========================================
+   AAFIYA HEADER — STICKY ON SCROLL
+========================================== */
+
+header.aafiya-header {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+/* Keep navbar layers above page content */
+header.aafiya-header .navbar-area,
+header.aafiya-header .main-nav,
+header.aafiya-header nav.navbar {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Preserve existing transparent/scrolled colors */
+header.aafiya-header.is-transparent,
+header.aafiya-header.is-scrolled {
+  width: 100%;
+}
+
+/* FIX: Keep fixed header from covering inner-page banners */
+
+.aafiya-header.fixed-top {
+  z-index: 1050 !important;
+}
+
+/* Add clearance only to the About page */
+.aafiya-about-page {
+  padding-top: 0 !important;
+}
+
+.aafiya-about-page .aafiya-about-banner {
+  margin-top: 88px !important;
+}
+
+/* Tablet and mobile header clearance */
+@media (max-width: 767px) {
+  .aafiya-about-page .aafiya-about-banner {
+    margin-top: 75px !important;
+  }
+}

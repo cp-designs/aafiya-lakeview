@@ -1,0 +1,1373 @@
+
+/* =====================================================
+   AAFIYA LAKEVIEW
+   KINGS STUDIO APARTMENT - 2BHK
+   Premium Responsive CSS
+===================================================== */
+
+.kings2-page {
+  --kings2-navy: #0d1741;
+  --kings2-navy-dark: #080f30;
+  --kings2-gold: #bc8634;
+  --kings2-gold-light: #f7921b;
+  --kings2-cream: #fff9ef;
+  --kings2-text: #626774;
+  --kings2-border: #e9e6df;
+
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: var(--kings2-text);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.kings2-page *,
+.kings2-page *::before,
+.kings2-page *::after {
+  box-sizing: border-box;
+}
+
+.kings2-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.kings2-page a {
+  text-decoration: none;
+}
+
+.kings2-container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.kings2-section-heading {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.kings2-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--kings2-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.kings2-section-heading h2 {
+  margin: 0;
+  color: var(--kings2-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(29px, 3.5vw, 40px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.kings2-underline {
+  width: 100px;
+  height: auto;
+  max-height: 24px;
+  margin: 14px auto 0;
+  object-fit: contain;
+}
+
+.kings2-section-heading p {
+  margin: 16px auto 0;
+  color: #777b85;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =====================================================
+   PAGE BANNER
+===================================================== */
+
+.kings2-page-banner {
+  position: relative;
+  display: flex;
+  min-height: 345px;
+  align-items: center;
+  padding: 100px 0 65px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(5, 11, 35, 0.95),
+      rgba(13, 23, 65, 0.78)
+    ),
+    url("/assets/img/about-us.jpg") center / cover no-repeat;
+}
+
+.kings2-page-banner::after {
+  position: absolute;
+  right: -115px;
+  bottom: -230px;
+  width: 460px;
+  height: 460px;
+  border: 1px solid rgba(247, 146, 27, 0.28);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.kings2-page-banner .kings2-container {
+  position: relative;
+  z-index: 1;
+}
+
+.kings2-banner-eyebrow {
+  display: block;
+  margin-bottom: 17px;
+  color: #f5b94e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.kings2-page-banner h1 {
+  max-width: 950px;
+  margin: 0;
+  color: #fff;
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.kings2-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.kings2-breadcrumb a {
+  color: #f5b94e;
+  transition: color 0.25s ease;
+}
+
+.kings2-breadcrumb a:hover {
+  color: #fff;
+}
+
+/* =====================================================
+   BOOKING WIDGET
+===================================================== */
+
+.kings2-booking-section {
+  padding: 60px 0 70px;
+  background: #fff;
+}
+
+.kings2-booking-section .kings2-section-heading {
+  margin-bottom: 30px;
+}
+
+.kings2-booking-widget {
+  min-height: 80px;
+  padding: 20px;
+  border: 1px solid #eee5d6;
+  background: #fffaf2;
+  box-shadow: 0 10px 32px rgba(13, 23, 65, 0.055);
+}
+
+/* =====================================================
+   ROOM OVERVIEW
+===================================================== */
+
+.kings2-overview-section {
+  padding: 75px 0 85px;
+  background: #fbfaf7;
+}
+
+.kings2-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 45px;
+}
+
+.kings2-main-image-wrap {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #eee9df;
+}
+
+.kings2-main-image {
+  width: 100%;
+  height: 475px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.kings2-main-image-wrap:hover .kings2-main-image {
+  transform: scale(1.035);
+}
+
+.kings2-overview-content {
+  min-width: 0;
+}
+
+.kings2-overview-label {
+  display: block;
+  margin: 3px 0 12px;
+  color: var(--kings2-gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.kings2-overview-content h2 {
+  margin: 0 0 24px;
+  color: var(--kings2-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(25px, 2.8vw, 33px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.kings2-specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kings2-spec-card {
+  display: flex;
+  min-height: 54px;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid #f0e9dd;
+  background: #fff;
+}
+
+.kings2-spec-label {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  padding: 13px 16px;
+  background: #f3f3f1;
+  color: var(--kings2-navy);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.kings2-spec-value {
+  display: flex;
+  width: 55%;
+  align-items: center;
+  padding: 13px 16px;
+  background: #f7921b;
+  color: var(--kings2-navy-dark);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.kings2-gallery-section {
+  padding: 85px 0;
+  background: #fff;
+}
+
+.kings2-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 225px;
+  gap: 15px;
+}
+
+.kings2-gallery-item {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #eee9df;
+  cursor: pointer;
+}
+
+.kings2-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.kings2-gallery-item::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(8, 15, 48, 0.38)
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.kings2-gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.kings2-gallery-zoom {
+  position: absolute;
+  z-index: 1;
+  right: 13px;
+  bottom: 13px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  background: var(--kings2-gold-light);
+  color: var(--kings2-navy);
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(7px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.kings2-gallery-item:hover .kings2-gallery-zoom,
+.kings2-gallery-item:focus-visible .kings2-gallery-zoom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================================================
+   FACILITIES
+===================================================== */
+
+.kings2-facilities-section {
+  padding: 85px 0;
+  background: #fbfaf7;
+}
+
+.kings2-facility-group {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 2fr);
+  gap: 25px;
+  padding: 25px 0;
+  border-bottom: 1px solid #e8e3d8;
+}
+
+.kings2-facility-group:first-of-type {
+  border-top: 1px solid #e8e3d8;
+}
+
+.kings2-facility-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.kings2-facility-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+  place-items: center;
+  border: 1px solid #efdfc1;
+  background: #fff2db;
+  color: #986718;
+  font-size: 21px;
+}
+
+.kings2-facility-title h3 {
+  margin: 7px 0 0;
+  color: var(--kings2-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.kings2-facility-group ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 13px 20px;
+  margin: 0;
+  padding: 4px 0 0;
+  list-style: none;
+}
+
+.kings2-facility-group li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #626774;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.kings2-facility-group li svg {
+  flex: 0 0 15px;
+  margin-top: 3px;
+  color: var(--kings2-gold);
+  font-size: 15px;
+}
+
+/* =====================================================
+   AMENITIES
+===================================================== */
+
+.kings2-amenities-section {
+  padding: 85px 0;
+  background: #fff;
+}
+
+.kings2-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.kings2-amenity-card {
+  display: flex;
+  min-height: 165px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 22px 14px;
+  border: 1px solid #eee6d8;
+  background: #fff;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.kings2-amenity-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(188, 134, 52, 0.65);
+  box-shadow: 0 12px 28px rgba(13, 23, 65, 0.07);
+}
+
+.kings2-amenity-icon {
+  display: grid;
+  width: 53px;
+  height: 53px;
+  place-items: center;
+  border: 1px solid rgba(188, 134, 52, 0.25);
+  background: #fff4df;
+  color: #986718;
+  font-size: 23px;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.kings2-amenity-card:hover .kings2-amenity-icon {
+  background: var(--kings2-navy);
+  color: #f5b94e;
+}
+
+.kings2-amenity-card h3 {
+  margin: 0;
+  color: var(--kings2-navy);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================================
+   RELATED ROOMS
+===================================================== */
+
+.kings2-related-section {
+  padding: 85px 0;
+  background: #fbfaf7;
+}
+
+.kings2-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.kings2-related-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #ece7dc;
+  background: #fff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.kings2-related-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(13, 23, 65, 0.09);
+}
+
+.kings2-related-image {
+  position: relative;
+  display: block;
+  height: 250px;
+  overflow: hidden;
+  background: #eee9df;
+}
+
+.kings2-related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.kings2-related-card:hover .kings2-related-image img {
+  transform: scale(1.06);
+}
+
+.kings2-related-arrow {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: grid;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  background: var(--kings2-gold-light);
+  color: var(--kings2-navy);
+  font-size: 19px;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.kings2-related-card:hover .kings2-related-arrow {
+  background: var(--kings2-navy);
+  color: #f5b94e;
+}
+
+.kings2-related-content {
+  padding: 24px 22px 27px;
+}
+
+.kings2-related-content h3 {
+  margin: 0 0 15px;
+  font-family: "Lora", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.kings2-related-content h3 a {
+  color: var(--kings2-navy);
+  transition: color 0.25s ease;
+}
+
+.kings2-related-content h3 a:hover {
+  color: var(--kings2-gold);
+}
+
+.kings2-rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 15px;
+  color: var(--kings2-gold);
+}
+
+.kings2-rating svg {
+  fill: currentColor;
+  font-size: 14px;
+}
+
+.kings2-room-price {
+  margin: 0 0 19px;
+  color: #6b707a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.kings2-book-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--kings2-gold);
+  color: var(--kings2-navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.kings2-book-link svg {
+  color: var(--kings2-gold);
+  transition: transform 0.25s ease;
+}
+
+.kings2-book-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.kings2-faq-section {
+  padding: 85px 0;
+  background: #fff;
+}
+
+.kings2-faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.kings2-faq-item {
+  margin-bottom: 15px;
+  overflow: hidden;
+  border: 1px solid #eee9df;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(13, 23, 65, 0.055);
+}
+
+.kings2-faq-item h3 {
+  margin: 0;
+}
+
+.kings2-faq-question {
+  display: flex;
+  width: 100%;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 23px;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  color: #222;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.kings2-faq-question > span:first-child {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.kings2-faq-question:hover {
+  color: var(--kings2-gold);
+}
+
+.kings2-faq-question.is-open {
+  background: linear-gradient(135deg, #bc8634, #a06f2a);
+  color: #fff;
+}
+
+.kings2-faq-toggle {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  border: 1px solid #eee2cd;
+  background: #fffaf1;
+  color: #986718;
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.kings2-faq-question.is-open .kings2-faq-toggle {
+  transform: rotate(180deg);
+}
+
+.kings2-faq-answer {
+  padding: 20px 24px 24px;
+  background: #fff;
+}
+
+.kings2-faq-answer p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.kings2-lightbox {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 75px 80px 40px;
+  background: rgba(4, 8, 24, 0.97);
+  backdrop-filter: blur(7px);
+}
+
+.kings2-lightbox-content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.kings2-lightbox-top {
+  position: absolute;
+  top: -65px;
+  right: -80px;
+  left: -80px;
+  display: flex;
+  min-height: 55px;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.kings2-lightbox-top > span:first-child {
+  color: #f5b94e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.kings2-lightbox-counter {
+  margin-left: auto;
+  color: #fff;
+  font-size: 12px;
+}
+
+.kings2-lightbox button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  border: 1px solid rgba(247, 146, 27, 0.45);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.kings2-lightbox button:hover {
+  background: var(--kings2-gold-light);
+  color: var(--kings2-navy);
+}
+
+.kings2-lightbox-top button {
+  margin-left: 0;
+}
+
+.kings2-lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 155px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.kings2-lightbox .kings2-lightbox-prev,
+.kings2-lightbox .kings2-lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.kings2-lightbox .kings2-lightbox-prev {
+  left: -58px;
+}
+
+.kings2-lightbox .kings2-lightbox-next {
+  right: -58px;
+}
+
+/* =====================================================
+   RESPONSIVE: TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+  .kings2-container {
+    width: min(100% - 36px, 760px);
+  }
+
+  .kings2-page-banner {
+    min-height: 310px;
+  }
+
+  .kings2-overview-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .kings2-main-image {
+    height: 420px;
+  }
+
+  .kings2-gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 195px;
+    gap: 12px;
+  }
+
+  .kings2-facility-group {
+    grid-template-columns: minmax(160px, 0.8fr) minmax(0, 1.5fr);
+    gap: 20px;
+  }
+
+  .kings2-amenities-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .kings2-related-grid {
+    gap: 16px;
+  }
+
+  .kings2-related-image {
+    height: 205px;
+  }
+
+  .kings2-related-content {
+    padding: 20px 17px 23px;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE: MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+  .kings2-container {
+    width: calc(100% - 32px);
+  }
+
+  .kings2-page-banner {
+    min-height: 280px;
+    padding: 100px 0 45px;
+  }
+
+  .kings2-banner-eyebrow {
+    margin-bottom: 12px;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .kings2-page-banner h1 {
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.35;
+  }
+
+  .kings2-breadcrumb {
+    gap: 8px;
+    margin-top: 18px;
+    font-size: 10px;
+  }
+
+  .kings2-section-heading {
+    margin-bottom: 32px;
+  }
+
+  .kings2-section-heading h2 {
+    font-size: clamp(25px, 6vw, 32px);
+    line-height: 1.4;
+  }
+
+  .kings2-underline {
+    width: 85px;
+    margin-top: 12px;
+  }
+
+  .kings2-booking-section,
+  .kings2-overview-section,
+  .kings2-gallery-section,
+  .kings2-facilities-section,
+  .kings2-amenities-section,
+  .kings2-related-section,
+  .kings2-faq-section {
+    padding: 58px 0;
+  }
+
+  .kings2-booking-section .kings2-section-heading {
+    margin-bottom: 25px;
+  }
+
+  .kings2-booking-widget {
+    min-height: 70px;
+    padding: 12px;
+  }
+
+  .kings2-main-image {
+    height: 300px;
+  }
+
+  .kings2-overview-content h2 {
+    font-size: 26px;
+  }
+
+  .kings2-specifications {
+    gap: 7px;
+  }
+
+  .kings2-spec-card {
+    min-height: 48px;
+  }
+
+  .kings2-spec-label {
+    padding: 11px 12px;
+    font-size: 11px;
+  }
+
+  .kings2-spec-value {
+    padding: 11px 12px;
+    font-size: 11px;
+  }
+
+  .kings2-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 155px;
+    gap: 9px;
+  }
+
+  .kings2-gallery-zoom {
+    right: 8px;
+    bottom: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .kings2-facility-group {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px 0;
+  }
+
+  .kings2-facility-title h3 {
+    font-size: 18px;
+  }
+
+  .kings2-facility-group ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px 14px;
+  }
+
+  .kings2-facility-group li {
+    gap: 7px;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .kings2-amenities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .kings2-amenity-card {
+    min-height: 135px;
+    gap: 12px;
+    padding: 18px 10px;
+  }
+
+  .kings2-amenity-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .kings2-amenity-card h3 {
+    font-size: 11px;
+  }
+
+  .kings2-related-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .kings2-related-image {
+    height: 245px;
+  }
+
+  .kings2-related-content {
+    padding: 21px;
+  }
+
+  .kings2-faq-question {
+    min-height: 65px;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .kings2-faq-question > span:first-child {
+    font-size: 12px;
+  }
+
+  .kings2-faq-toggle {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    font-size: 16px;
+  }
+
+  .kings2-faq-answer {
+    padding: 17px;
+  }
+
+  .kings2-faq-answer p {
+    font-size: 12px;
+  }
+
+  .kings2-lightbox {
+    padding: 65px 14px 30px;
+  }
+
+  .kings2-lightbox-top {
+    top: -55px;
+    right: -14px;
+    left: -14px;
+    min-height: 48px;
+    gap: 10px;
+    padding: 8px 12px;
+  }
+
+  .kings2-lightbox-top > span:first-child {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .kings2-lightbox button {
+    width: 37px;
+    height: 37px;
+    flex-basis: 37px;
+    font-size: 19px;
+  }
+
+  .kings2-lightbox-image {
+    max-width: 100%;
+    max-height: calc(100vh - 145px);
+  }
+
+  .kings2-lightbox .kings2-lightbox-prev {
+    left: -7px;
+  }
+
+  .kings2-lightbox .kings2-lightbox-next {
+    right: -7px;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+  .kings2-container {
+    width: calc(100% - 24px);
+  }
+
+  .kings2-page-banner h1 {
+    font-size: 26px;
+  }
+
+  .kings2-gallery-grid {
+    grid-auto-rows: 130px;
+    gap: 7px;
+  }
+
+  .kings2-facility-group ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kings2-amenity-card {
+    min-height: 125px;
+  }
+}
+/* =========================================
+   KINGS 2BHK - BOOKING SECTION
+========================================= */
+
+.kings2-booking-section {
+  position: relative;
+  width: 100%;
+  padding: 75px 0;
+  background: #f8f9fc;
+  overflow: hidden;
+}
+
+.kings2-booking-section .kings2-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.kings2-booking-section .kings2-section-heading {
+  margin-bottom: 35px;
+}
+
+/* Booking Card */
+
+.kings2-booking-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 32px 36px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 23, 65, 0.09);
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(13, 23, 65, 0.07);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.kings2-booking-card:hover {
+  box-shadow: 0 18px 42px rgba(13, 23, 65, 0.11);
+  transform: translateY(-3px);
+}
+
+/* Booking Information */
+
+.kings2-booking-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.kings2-premium-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 62px;
+  width: 62px;
+  height: 62px;
+  color: #d59a2a;
+  background: rgba(213, 154, 42, 0.12);
+  border: 1px solid rgba(213, 154, 42, 0.25);
+  border-radius: 10px;
+  font-size: 27px;
+}
+
+.kings2-booking-info strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #0d1741;
+  font-family: "Lora", serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.kings2-booking-info p {
+  margin: 0;
+  color: #6b7280;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Check Availability Button */
+
+.kings2-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+  min-height: 52px;
+  padding: 15px 25px;
+  color: #ffffff;
+  background: #0d1741;
+  border: 1px solid #0d1741;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.kings2-primary-button svg {
+  flex-shrink: 0;
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.kings2-primary-button:hover {
+  color: #ffffff;
+  background: #d59a2a;
+  border-color: #d59a2a;
+  transform: translateY(-2px);
+}
+
+.kings2-primary-button:hover svg {
+  transform: translateX(4px);
+}
+
+.kings2-primary-button:focus-visible {
+  outline: 3px solid rgba(213, 154, 42, 0.45);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+  .kings2-booking-section {
+    padding: 55px 0;
+  }
+
+  .kings2-booking-section .kings2-container {
+    width: calc(100% - 32px);
+  }
+
+  .kings2-booking-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 25px 22px;
+  }
+
+  .kings2-booking-info {
+    gap: 15px;
+  }
+
+  .kings2-premium-icon {
+    flex-basis: 54px;
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
+  }
+
+  .kings2-booking-info strong {
+    font-size: 19px;
+  }
+
+  .kings2-booking-info p {
+    font-size: 13px;
+  }
+
+  .kings2-primary-button {
+    width: 100%;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kings2-booking-section {
+    padding: 42px 0;
+  }
+
+  .kings2-booking-card {
+    padding: 22px 17px;
+    gap: 22px;
+  }
+
+  .kings2-booking-info {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .kings2-premium-icon {
+    flex-basis: 45px;
+    width: 45px;
+    height: 45px;
+    font-size: 21px;
+  }
+
+  .kings2-booking-info strong {
+    font-size: 17px;
+  }
+
+  .kings2-booking-info p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .kings2-primary-button {
+    padding: 13px 16px;
+    font-size: 12px;
+  }
+}
+/* =========================================
+   KINGS 2BHK - FAQ FONT FIX
+========================================= */
+
+.kings2-page .kings2-faq-section,
+.kings2-page .kings2-faq-section * {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.kings2-page .kings2-faq-question > span:first-child {
+  font-family: "Montserrat", Arial, sans-serif !important;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.kings2-page .kings2-faq-answer p {
+  font-family: "Montserrat", Arial, sans-serif !important;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.kings2-page .kings2-faq-toggle {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .kings2-page .kings2-faq-question > span:first-child {
+    font-size: 12px;
+  }
+
+  .kings2-page .kings2-faq-answer p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,529 @@
+
+/* ==========================================
+   AAFIYA LAKEVIEW — PREMIUM GALLERY
+========================================== */
+
+.aafiya-gallery-page {
+  --gallery-navy: rgb(13, 23, 65);
+  --gallery-dark: #080f30;
+  --gallery-gold: #d5a85b;
+  --gallery-text: #535c70;
+  --gallery-muted: #7b8291;
+
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.aafiya-gallery-page *,
+.aafiya-gallery-page *::before,
+.aafiya-gallery-page *::after {
+  box-sizing: border-box;
+}
+
+/* Page banner */
+
+.aafiya-gallery-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+  padding: 115px 0 55px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(100deg, rgba(8, 15, 48, 0.96), rgba(13, 23, 65, 0.72)),
+    url("/assets/img/about-us.jpg") center 45% / cover no-repeat;
+}
+
+.aafiya-gallery-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 15, 48, 0.25),
+    transparent 85%
+  );
+  pointer-events: none;
+}
+
+.aafiya-gallery-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.aafiya-gallery-eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gallery-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.aafiya-gallery-banner h1 {
+  max-width: 850px;
+  margin: 0 0 23px;
+  color: #fff;
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.aafiya-gallery-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.aafiya-gallery-breadcrumb a {
+  color: var(--gallery-gold);
+  text-decoration: none;
+}
+
+.aafiya-gallery-breadcrumb a:hover {
+  color: #fff;
+}
+
+.aafiya-gallery-breadcrumb > span:last-child {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Main gallery section */
+
+.aafiya-gallery-section {
+  padding: 78px 0 90px;
+  background: #fff;
+}
+
+.aafiya-gallery-heading {
+  max-width: 750px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.aafiya-gallery-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 13px;
+  color: #a87932;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.aafiya-gallery-kicker::before,
+.aafiya-gallery-kicker::after {
+  width: 25px;
+  height: 1px;
+  background: var(--gallery-gold);
+  content: "";
+}
+
+.aafiya-gallery-heading h2 {
+  margin: 0 0 17px;
+  color: var(--gallery-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.aafiya-gallery-underline {
+  display: block;
+  width: auto;
+  max-width: 130px;
+  height: auto;
+  margin: 0 auto 17px;
+}
+
+.aafiya-gallery-heading p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--gallery-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Filter buttons */
+
+.aafiya-gallery-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.aafiya-gallery-filters button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 10px 17px;
+  border: 1px solid #e4e7ef;
+  border-radius: 0;
+  color: #424a5c;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.aafiya-gallery-filters button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--gallery-gold);
+  stroke-width: 1.8;
+}
+
+.aafiya-gallery-filters button:hover {
+  border-color: var(--gallery-gold);
+  color: var(--gallery-navy);
+}
+
+.aafiya-gallery-filters button.active {
+  border-color: var(--gallery-navy);
+  color: #fff;
+  background: var(--gallery-navy);
+  box-shadow: 0 5px 15px rgba(13, 23, 65, 0.15);
+}
+
+.aafiya-gallery-filters button.active svg {
+  color: var(--gallery-gold);
+}
+
+/* Gallery grid */
+
+.aafiya-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 230px;
+  grid-auto-flow: dense;
+  gap: 18px;
+}
+
+.aafiya-gallery-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #f0f1f4;
+  text-align: left;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.aafiya-gallery-card:nth-child(7n + 1),
+.aafiya-gallery-card:nth-child(7n + 5) {
+  grid-row: span 1;
+}
+
+.aafiya-gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.aafiya-gallery-card:hover img {
+  transform: scale(1.07);
+}
+
+.aafiya-gallery-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 17px;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 15, 48, 0.08) 15%,
+    rgba(8, 15, 48, 0.72) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aafiya-gallery-card:hover .aafiya-gallery-card-overlay,
+.aafiya-gallery-card:focus-visible .aafiya-gallery-card-overlay {
+  opacity: 1;
+}
+
+.aafiya-gallery-zoom {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(13, 23, 65, 0.8);
+}
+
+.aafiya-gallery-zoom svg {
+  width: 19px;
+  height: 19px;
+}
+
+.aafiya-gallery-card-caption {
+  align-self: flex-start;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.aafiya-gallery-count {
+  margin-top: 28px;
+  color: var(--gallery-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.aafiya-gallery-count strong {
+  color: var(--gallery-navy);
+}
+
+.aafiya-gallery-empty {
+  padding: 45px 15px;
+  color: var(--gallery-muted);
+  text-align: center;
+}
+
+/* Image preview lightbox */
+
+.aafiya-gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 65px 24px 25px;
+  background: rgba(4, 8, 25, 0.94);
+  animation: aafiyaGalleryFadeIn 0.2s ease;
+}
+
+.aafiya-gallery-lightbox > img {
+  display: block;
+  max-width: min(1100px, 100%);
+  max-height: calc(100vh - 135px);
+  object-fit: contain;
+  box-shadow: 0 15px 55px rgba(0, 0, 0, 0.3);
+}
+
+.aafiya-gallery-lightbox > p {
+  max-width: 90%;
+  margin: 0;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.aafiya-gallery-lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  display: grid;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.aafiya-gallery-lightbox-close svg {
+  width: 22px;
+  height: 22px;
+}
+
+.aafiya-gallery-lightbox-close:hover {
+  color: var(--gallery-dark);
+  background: var(--gallery-gold);
+}
+
+@keyframes aafiyaGalleryFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .aafiya-gallery-banner {
+    min-height: 280px;
+    padding-top: 105px;
+  }
+
+  .aafiya-gallery-section {
+    padding: 65px 0 75px;
+  }
+
+  .aafiya-gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 210px;
+    gap: 14px;
+  }
+
+  .aafiya-gallery-filters {
+    gap: 8px;
+  }
+
+  .aafiya-gallery-filters button {
+    padding: 10px 13px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .aafiya-gallery-banner {
+    min-height: 245px;
+    padding: 100px 0 35px;
+  }
+
+  .aafiya-gallery-banner h1 {
+    font-size: clamp(27px, 7vw, 36px);
+  }
+
+  .aafiya-gallery-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .aafiya-gallery-section {
+    padding: 48px 0 55px;
+  }
+
+  .aafiya-gallery-heading {
+    margin-bottom: 27px;
+  }
+
+  .aafiya-gallery-heading p {
+    font-size: 13px;
+  }
+
+  .aafiya-gallery-filters {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-right: -12px;
+    padding: 0 12px 10px 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gallery-gold) #f0f1f4;
+  }
+
+  .aafiya-gallery-filters button {
+    flex: 0 0 auto;
+    min-height: 40px;
+    font-size: 11px;
+  }
+
+  .aafiya-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 185px;
+    gap: 10px;
+  }
+
+  .aafiya-gallery-card-overlay {
+    padding: 10px;
+    opacity: 1;
+    background: linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(8, 15, 48, 0.72) 100%
+    );
+  }
+
+  .aafiya-gallery-zoom {
+    width: 31px;
+    height: 31px;
+  }
+
+  .aafiya-gallery-zoom svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .aafiya-gallery-card-caption {
+    font-size: 10px;
+  }
+
+  .aafiya-gallery-lightbox {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .aafiya-gallery-lightbox-close {
+    top: 14px;
+    right: 14px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 380px) {
+  .aafiya-gallery-grid {
+    grid-auto-rows: 155px;
+    gap: 8px;
+  }
+
+  .aafiya-gallery-filters button {
+    padding: 9px 11px;
+  }
+
+  .aafiya-gallery-heading h2 {
+    font-size: 26px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .aafiya-gallery-page *,
+  .aafiya-gallery-page *::before,
+  .aafiya-gallery-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
