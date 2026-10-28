@@ -15,6 +15,7 @@ import {
   FiX,
 } from "react-icons/fi";
 
+
 import "../styles/Blog.css";
 
 const BLOG_BASE_URL = "https://www.aafiyalakeview.com/";
@@ -26,7 +27,7 @@ const blogPosts = [
       "A Guide to Finding Premium Apartments in Coimbatore Near Key City Areas",
     image: "/assets/img/blog/premium.png",
     alt: "Premium Apartments in Coimbatore Near Key City Areas",
-    slug: "premium-apartments-in-coimbatore",
+    route: "/premium-apartments-in-coimbatore",
     category: "Apartments",
   },
   {
@@ -36,7 +37,7 @@ const blogPosts = [
     image:
       "/assets/img/blog/smart-travel-cost-effective-stay-coimbatore.jpeg",
     alt: "Smart Travel in 2026: Cost-Effective Stay in Coimbatore",
-    slug: "smart-travel-2026-cost-effective-stay-coimbatore",
+    route: "/smart-travel-2026-cost-effective-stay-coimbatore",
     category: "Travel Tips",
   },
   {
@@ -45,7 +46,7 @@ const blogPosts = [
     image:
       "/assets/img/blog/growing-demand-2bhk-service-apartments-coimbatore.jpeg",
     alt: "The Growing Demand for 2BHK Service Apartments in Coimbatore",
-    slug: "growing-demand-2bhk-service-apartments-coimbatore",
+    route: "/growing-demand-2bhk-service-apartments-coimbatore",
     category: "2BHK Apartments",
   },
   {
@@ -54,7 +55,7 @@ const blogPosts = [
       "How to Choose the Right Service Apartment in Coimbatore for a Long Stay",
     image: "/assets/img/blog/monthly-rent-service-apartments.jpeg",
     alt: "How to Choose Service Apartments in Coimbatore for Long Stays",
-    slug: "choose-right-service-apartment-coimbatore",
+    route: "/choose-right-service-apartment-coimbatore",
     category: "Travel Tips",
   },
   {
@@ -64,7 +65,7 @@ const blogPosts = [
     image:
       "/assets/img/blog/business-travel-service-apartments-coimbatore.jpeg",
     alt: "Why Business Travellers Choose Service Apartments in Coimbatore",
-    slug: "business-travel-service-apartments-coimbatore",
+    route: "/business-travel-service-apartments-coimbatore",
     category: "Business Travel",
   },
   {
@@ -74,7 +75,7 @@ const blogPosts = [
     image:
       "/assets/img/blog/comfort-living-standard-service-apartments-coimbatore.jpeg",
     alt: "Comfort Living Standard with Service Apartments in Coimbatore",
-    slug: "comfort-living-standard-service-apartments-coimbatore",
+    route: "/comfort-living-standard-service-apartments-coimbatore",
     category: "Apartments",
   },
   {
@@ -84,7 +85,7 @@ const blogPosts = [
     image:
       "/assets/img/blog/affordable-1bhk-studio-apartment-for-rent-in-coimbatore3.jpeg",
     alt: "Affordable 1BHK Studio Apartment for Rent in Coimbatore",
-    slug: "affordable-1bhk-studio-apartment-for-rent-in-coimbatore",
+    route: "/affordable-1bhk-studio-apartment-for-rent-in-coimbatore",
     category: "1BHK Apartments",
   },
   {
@@ -93,7 +94,7 @@ const blogPosts = [
       "What Makes a Service Apartment in Coimbatore the Perfect Accommodation Choice",
     image: "/assets/img/blog/comfortable-service-apartment-coimbatore.jpeg",
     alt: "Comfortable Service Apartment in Coimbatore",
-    slug: "comfortable-service-apartment-coimbatore",
+    route: "/comfortable-service-apartment-coimbatore",
     category: "Apartments",
   },
   {
@@ -101,7 +102,7 @@ const blogPosts = [
     title: "Top Benefits of Choosing a Service Apartment for Your Stay",
     image: "/assets/img/blog/benefits-of-service-apartments-for-your-stay.png",
     alt: "Benefits of Service Apartments for Your Stay",
-    slug: "benefits-of-service-apartments-for-your-stay",
+    route: "/benefits-of-service-apartments-for-your-stay",
     category: "Travel Tips",
   },
   {
@@ -110,7 +111,7 @@ const blogPosts = [
     image:
       "/assets/img/blog/aafiya-lakeview-lifestyle-amenities-coimbatore.png",
     alt: "Aafiya Lakeview Lifestyle and Amenities",
-    slug: "aafiya-lakeview-lifestyle-amenities-coimbatore",
+    route: "/aafiya-lakeview-lifestyle-amenities-coimbatore",
     category: "Aafiya Lakeview",
   },
   {
@@ -119,7 +120,7 @@ const blogPosts = [
     image:
       "/assets/img/blog/service-apartments-vs-hotels-long-stays-coimbatore.png",
     alt: "Service Apartments vs Hotels for Long Stays",
-    slug: "service-apartments-vs-hotels-long-stays-coimbatore",
+    route: "/service-apartments-vs-hotels-long-stays-coimbatore",
     category: "Travel Tips",
   },
   {
@@ -128,7 +129,7 @@ const blogPosts = [
       "1 BHK Apartments: Smart Choice for Comfortable Urban Living",
     image: "/assets/img/blog/1bhk-apartment-comfortable-urban-living.png",
     alt: "1 BHK Apartments for Comfortable Urban Living",
-    slug: "1-bhk-apartments-smart-urban-living-choice",
+    route: "/1-bhk-apartments-smart-urban-living-choice",
     category: "1BHK Apartments",
   },
   {
@@ -136,7 +137,7 @@ const blogPosts = [
     title: "Luxury Apartment for Modern and Comfortable Living",
     image: "/assets/img/blog/luxury-apartment-in-coimbatore.png",
     alt: "Luxury Apartment in Coimbatore",
-    slug: "living-luxury-apartments-coimbatore",
+    route: "/living-luxury-apartments-coimbatore",
     category: "Apartments",
   },
   {
@@ -145,7 +146,7 @@ const blogPosts = [
       "The Benefits of Living in a Fully Furnished Service Apartment",
     image: "/assets/img/blog/8.webp",
     alt: "Fully Furnished Service Apartment",
-    slug: "benefits-of-fully-furnished-service-apartment",
+    route: "/benefits-of-fully-furnished-service-apartment",
     category: "Apartments",
   },
   {
@@ -153,7 +154,7 @@ const blogPosts = [
     title: "Diwali Decoration Ideas for Apartments",
     image: "/assets/img/blog/7.webp",
     alt: "Diwali Decoration Ideas for Apartments",
-    slug: "diwali-decoration-ideas-for-apartments",
+    route: "/diwali-decoration-ideas-for-apartments",
     category: "Lifestyle",
   },
   {
@@ -161,7 +162,7 @@ const blogPosts = [
     title: "1 BHK Apartments Explained: From Features to Advantages",
     image: "/assets/img/blog/6.webp",
     alt: "1 BHK Apartments Explained",
-    slug: "1-bhk-apartments-features-and-advantages",
+    route: "/1-bhk-apartments-features-and-advantages",
     category: "1BHK Apartments",
   },
   {
@@ -170,7 +171,7 @@ const blogPosts = [
       "2 BHK King Studio Apartments: Blending Style with Practicality",
     image: "/assets/img/blog/5.webp",
     alt: "2 BHK King Studio Apartments",
-    slug: "2-bhk-king-studio-apartments-smart-comfort-style",
+    route: "/2-bhk-king-studio-apartments-smart-comfort-style",
     category: "2BHK Apartments",
   },
   {
@@ -178,7 +179,7 @@ const blogPosts = [
     title: "Why 2 BHK Studio Apartments Are Ideal for Urban Families",
     image: "/assets/img/blog/4.webp",
     alt: "2 BHK Studio Apartments for Urban Families",
-    slug: "2bhk-studio-homes-for-urban-families",
+    route: "/2bhk-studio-homes-for-urban-families",
     category: "2BHK Apartments",
   },
   {
@@ -187,7 +188,7 @@ const blogPosts = [
       "A Smart Living Option: Advantages of Choosing a 2 BHK King Studio Apartment",
     image: "/assets/img/blog/3.webp",
     alt: "Advantages of a 2 BHK King Studio Apartment",
-    slug: "smart-living-benefits-2bhk-king-studio-apartment",
+    route: "/smart-living-benefits-2bhk-king-studio-apartment",
     category: "2BHK Apartments",
   },
   {
@@ -195,7 +196,7 @@ const blogPosts = [
     title: "Why Studio Apartments Are Perfect for Modern Urban Life",
     image: "/assets/img/blog/2.webp",
     alt: "Studio Apartments for Modern Urban Life",
-    slug: "modern-urban-life-studio-apartments",
+    route: "/modern-urban-life-studio-apartments",
     category: "Apartments",
   },
   {
@@ -204,7 +205,7 @@ const blogPosts = [
       "Why Service Apartments Are Ideal for Business and Family Stays",
     image: "/assets/img/blog/1.webp",
     alt: "Service Apartments for Business and Family Stays",
-    slug: "service-apartments-ideal-business-family-travel",
+    route: "/service-apartments-ideal-business-family-travel",
     category: "Business Travel",
   },
 ];
@@ -243,48 +244,51 @@ function BlogPageHeading() {
 }
 
 function BlogCard({ post, viewMode }) {
-  const articleUrl = `${BLOG_BASE_URL}${post.slug}`;
+  const articleUrl = post.route;
 
   return (
-    <article
-      className={`aafiya-blog-card ${
-        viewMode === "list" ? "aafiya-blog-card-list" : ""
-      }`}
+<article
+  className={`aafiya-blog-card ${
+    viewMode === "list" ? "aafiya-blog-card-list" : ""
+  }`}
+>
+  <Link
+    to={articleUrl}
+    className="aafiya-blog-card-image"
+    aria-label={`Read ${post.title}`}
+  >
+    <img
+      src={post.image}
+      alt={post.alt}
+      loading="lazy"
+      onError={(event) => {
+        event.currentTarget.style.visibility = "hidden";
+      }}
+    />
+
+    <span className="aafiya-blog-image-icon" aria-hidden="true">
+      <FiBookOpen />
+    </span>
+  </Link>
+
+  <div className="aafiya-blog-card-content">
+    <span className="aafiya-blog-category">
+      {post.category}
+    </span>
+
+    <h2>
+      <Link to={articleUrl}>{post.title}</Link>
+    </h2>
+
+    <Link
+      to={articleUrl}
+      className="aafiya-blog-read-more"
     >
-      <a
-        href={articleUrl}
-        className="aafiya-blog-card-image"
-        aria-label={`Read ${post.title}`}
-      >
-        <img
-          src={post.image}
-          alt={post.alt}
-          loading="lazy"
-          onError={(event) => {
-            event.currentTarget.style.visibility = "hidden";
-          }}
-        />
-
-        <span className="aafiya-blog-image-icon" aria-hidden="true">
-          <FiBookOpen />
-        </span>
-      </a>
-
-      <div className="aafiya-blog-card-content">
-        <span className="aafiya-blog-category">
-          {post.category}
-        </span>
-
-        <h2>
-          <a href={articleUrl}>{post.title}</a>
-        </h2>
-
-        <a className="aafiya-blog-read-more" href={articleUrl}>
-          Read More
-          <FiArrowRight aria-hidden="true" />
-        </a>
-      </div>
-    </article>
+      Read More
+      <FiArrowRight aria-hidden="true" />
+    </Link>
+  </div>
+</article>
   );
 }
 
