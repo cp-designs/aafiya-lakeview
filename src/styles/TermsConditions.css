@@ -1,0 +1,425 @@
+
+/* ==========================================
+   AAFIYA LAKEVIEW
+   TERMS & CONDITIONS — BRAND MATCHED DESIGN
+========================================== */
+
+.terms-page {
+  --tc-navy: rgb(13, 23, 65);
+  --tc-dark: #080f30;
+  --tc-gold: #d5a85b;
+  --tc-text: #535c70;
+  --tc-muted: #7b8291;
+
+  width: 100%;
+  overflow: hidden;
+  color: var(--tc-text);
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.terms-page *,
+.terms-page *::before,
+.terms-page *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   PAGE BANNER — SAME AS GALLERY
+========================================== */
+
+.terms-page .page-title-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+  padding: 115px 0 55px;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(8, 15, 48, 0.96),
+      rgba(13, 23, 65, 0.72)
+    ),
+    url("/assets/img/about-us.jpg") center 45% / cover no-repeat !important;
+}
+
+.terms-page .page-title-area::before,
+.terms-page .page-title-area::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(213, 168, 91, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: termsFloat 8s ease-in-out infinite;
+}
+
+.terms-page .page-title-area::before {
+  top: -125px;
+  right: 8%;
+  width: 300px;
+  height: 300px;
+}
+
+.terms-page .page-title-area::after {
+  bottom: -125px;
+  left: 9%;
+  width: 220px;
+  height: 220px;
+  animation-delay: -4s;
+}
+
+.terms-page .page-title-area > .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.terms-page .page-title-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: termsFadeUp 0.7s ease both;
+}
+
+/* Banner heading */
+
+.terms-page .page-title-content .title,
+.terms-page #banner-color {
+  margin: 0 0 23px;
+  color: #fff !important;
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+/* Gold heading underline */
+
+.terms-page .page-title-content .title::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 2px;
+  margin: 18px auto 0;
+  background: var(--tc-gold);
+}
+
+/* Breadcrumb */
+
+.terms-page .page-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: transparent;
+}
+
+.terms-page .page-breadcrumb li {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.terms-page .page-breadcrumb li + li::before {
+  content: "/";
+  margin-right: 12px;
+  color: var(--tc-gold);
+}
+
+.terms-page .page-breadcrumb a {
+  color: var(--tc-gold);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.terms-page .page-breadcrumb a:hover {
+  color: #fff;
+}
+
+/* ==========================================
+   TERMS CONTENT SECTION
+========================================== */
+
+.terms-page .privacy-policy-area {
+  position: relative;
+  padding: 78px 0 90px;
+  background: #f7f8fb;
+}
+
+.terms-page .privacy-policy-area > .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* Main content card */
+
+.terms-page .privacy-policy-content {
+  position: relative;
+  padding: clamp(25px, 4vw, 52px);
+  overflow: hidden;
+  border: 1px solid #e9eaf0;
+  border-top: 3px solid var(--tc-gold);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(13, 23, 65, 0.06);
+  animation: termsFadeUp 0.8s ease both;
+}
+
+/* Main title */
+
+.terms-page .privacy-policy-content h2 {
+  margin: 0 0 22px;
+  color: var(--tc-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(23px, 2.8vw, 31px);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Section headings */
+
+.terms-page .privacy-policy-content h3 {
+  margin: 34px 0 15px;
+  padding-left: 14px;
+  border-left: 3px solid var(--tc-gold);
+  color: var(--tc-navy);
+  font-family: "Lora", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.terms-page .privacy-policy-content h2 + h3 {
+  margin-top: 28px;
+}
+
+/* Paragraph text */
+
+.terms-page .privacy-policy-content p {
+  margin: 0 0 18px;
+  color: var(--tc-text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+/* Lists */
+
+.terms-page .privacy-policy-content ul,
+.terms-page .privacy-policy-content ol {
+  margin: 12px 0 25px;
+  padding-left: 25px;
+}
+
+.terms-page .privacy-policy-content li {
+  margin-bottom: 11px;
+  padding-left: 5px;
+  color: var(--tc-text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.terms-page .privacy-policy-content li::marker {
+  color: var(--tc-gold);
+}
+
+.terms-page .privacy-policy-content strong {
+  color: var(--tc-navy);
+  font-weight: 700;
+}
+
+/* Links */
+
+.terms-page .privacy-policy-content a {
+  color: var(--tc-navy);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.25s ease;
+}
+
+.terms-page .privacy-policy-content a:hover {
+  color: #a87932;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   FLOATING DECORATIVE ELEMENTS
+========================================== */
+
+.terms-page .terms-floating {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: termsFloat 7s ease-in-out infinite;
+}
+
+.terms-page .terms-floating-one {
+  top: 170px;
+  left: 2%;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(13, 23, 65, 0.12);
+}
+
+.terms-page .terms-floating-two {
+  right: 3%;
+  bottom: 140px;
+  width: 18px;
+  height: 18px;
+  background: rgba(213, 168, 91, 0.3);
+  animation-delay: -3s;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes termsFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes termsFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .terms-page .page-title-area {
+    min-height: 285px;
+    padding-top: 105px;
+  }
+
+  .terms-page .privacy-policy-area {
+    padding: 60px 0 70px;
+  }
+
+  .terms-page .privacy-policy-content {
+    padding: 35px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .terms-page .page-title-area {
+    min-height: 245px;
+    padding: 100px 0 35px;
+    background-position: center 45%;
+  }
+
+  .terms-page .page-title-content .title,
+  .terms-page #banner-color {
+    font-size: clamp(27px, 7vw, 36px);
+  }
+
+  .terms-page .page-title-area::before {
+    right: -110px;
+  }
+
+  .terms-page .privacy-policy-area {
+    padding: 42px 0 55px;
+  }
+
+  .terms-page .privacy-policy-area > .container {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .terms-page .privacy-policy-content {
+    padding: 25px 20px;
+  }
+
+  .terms-page .privacy-policy-content h2 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .terms-page .privacy-policy-content h3 {
+    margin-top: 27px;
+    font-size: 18px;
+  }
+
+  .terms-page .privacy-policy-content p,
+  .terms-page .privacy-policy-content li {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .terms-page .privacy-policy-content ul,
+  .terms-page .privacy-policy-content ol {
+    padding-left: 21px;
+  }
+
+  .terms-page .terms-floating-one {
+    left: 1%;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+  .terms-page .privacy-policy-content {
+    padding: 22px 16px;
+  }
+
+  .terms-page .privacy-policy-content h2 {
+    font-size: 22px;
+  }
+
+  .terms-page .privacy-policy-content h3 {
+    font-size: 17px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .terms-page *,
+  .terms-page *::before,
+  .terms-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

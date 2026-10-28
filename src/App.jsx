@@ -43,6 +43,7 @@ import TwoBHKKingStudioApartments from "./pages/blog/TwoBHKKingStudioApartments"
 import TwoBHKStudioUrbanFamilies from "./pages/blog/TwoBHKStudioUrbanFamilies";
 import SmartLivingBenefits2BHKKingStudio from "./pages/blog/SmartLivingBenefits2BHKKingStudio";
 import ServiceApartmentsBusinessFamily from "./pages/blog/ServiceApartmentsBusinessFamily";
+import TermsConditions from "./pages/TermsConditions";
 
 
 import "./styles/Home.css";
@@ -382,6 +383,14 @@ function App() {
           }
         />
         <Route path="/contact-us" element={<ContactRoutePage />} />
+        <Route
+        path="/terms-and-conditions"
+        element={
+          <BlogDetailRoutePage>
+            <TermsConditions />
+          </BlogDetailRoutePage>
+        }
+      />
       </Routes>
     </BrowserRouter>
   );
